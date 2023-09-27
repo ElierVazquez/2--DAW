@@ -32,21 +32,19 @@
         public static void quieroElDiez(int x)
         {
 
-            int cont = 0;
+            int cont = 1;
             int num = 0;
+
+            if (cont==0)
+            {
+                throw new Exception("error");
+            }
 
             while (cont <= x)
             {
-                if (cont==0)
-                {
-                    num+=2;
-                    cont++;
-                    continue;
-                }
-
-                Console.WriteLine(Factorial(num));
                 num+=2;
                 cont++;
+                Console.WriteLine(Factorial(num));
             }
 
         }
