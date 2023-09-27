@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/horabaixa/Escriptori/2º DAW/DWS/dotNET/horabaixa.csproj": {}
+    "/home/horabaixa/Escriptori/2º DAW/DWS/Unidad 1/dotnet/horabaixa.csproj": {}
   },
   "projects": {
-    "/home/horabaixa/Escriptori/2º DAW/DWS/dotNET/horabaixa.csproj": {
+    "/home/horabaixa/Escriptori/2º DAW/DWS/Unidad 1/dotnet/horabaixa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/dotNET/horabaixa.csproj",
+        "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/Unidad 1/dotnet/horabaixa.csproj",
         "projectName": "horabaixa",
-        "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/dotNET/horabaixa.csproj",
+        "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/Unidad 1/dotnet/horabaixa.csproj",
         "packagesPath": "/home/horabaixa/.nuget/packages/",
-        "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/dotNET/obj/",
+        "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/Unidad 1/dotnet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/horabaixa/.nuget/NuGet/NuGet.Config"

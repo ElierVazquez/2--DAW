@@ -29,13 +29,32 @@
 
         }
 
+        public static void quieroElDiez(int x)
+        {
+
+            int cont = 0;
+            int num = 0;
+
+            while (cont <= x)
+            {
+                if (cont==0)
+                {
+                    num+=2;
+                    cont++;
+                    continue;
+                }
+
+                Console.WriteLine(Factorial(num));
+                num+=2;
+                cont++;
+            }
+
+        }
+
         static void Main(string[] args)
         {
             
-            for (long num = 2; num <= 20; num = num + 2)
-            {
-                Console.WriteLine(Factorial(num));
-            }
+            quieroElDiez(10);
 
         }
     }
