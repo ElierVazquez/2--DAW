@@ -1,0 +1,15 @@
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/Ud2
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/Ud2.deps.json
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/Ud2.runtimeconfig.json
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/Ud2.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/ref/Ud2.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/bin/Debug/net6.0/Ud2.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.csproj.AssemblyReference.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.GeneratedMSBuildEditorConfig.editorconfig
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.AssemblyInfoInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.AssemblyInfo.cs
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.csproj.CoreCompileInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/ref/Ud2.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/obj/Debug/net6.0/Ud2.genruntimeconfig.cache
