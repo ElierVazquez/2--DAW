@@ -9,6 +9,8 @@ namespace Test
             int columnas = array.GetLength(0)-1;
             int filas = array.GetLength(1)-1;
 
+            int columna = 1;
+
             bool suma = true;
             int totalFila = 0;
             int totalFilaAux = 0;
@@ -16,25 +18,27 @@ namespace Test
             for (int fila1 = 0; fila1 <= filas; fila1++)
             {
                 totalFila = totalFila + array[0,fila1];
+                return totalFila;
             }
             
-            for (int i = 0; i <= columnas; i++)
+            while ((columna<columnas) && suma)
             {
-                for (int j = 0; j <= filas; j++)
+                for (int j = 1; j <= filas; j++)
                 {
                     totalFilaAux = totalFilaAux + array[columnas,filas];
+                    return totalFilaAux;
                 }
 
                 if (totalFila != totalFilaAux)
                 {
                     suma = false;
-                    return totalFilaAux;
                 }
 
                 totalFilaAux = 0;
+                columna++;
             }
 
-            return totalFilaAux;
+            return 0;
         }
 
         static void Main (string[] args)
@@ -98,7 +102,7 @@ namespace Test
             } */
 
             int[,] array = new int[2,2] {{1, 2},
-                                        {2, 1}};
+                                        {2, 0}};
 
             Console.WriteLine(Act1(array));
         }
