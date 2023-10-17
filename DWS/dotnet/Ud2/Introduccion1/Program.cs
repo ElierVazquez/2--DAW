@@ -15,7 +15,7 @@ namespace Test
             int totalFila = 0;
             int totalFilaAux = 0;
 
-            for (int fila1 = 0; fila1 <= filas; fila1++)
+            for (int fila1 = 0; fila1 <= filas; )
             {
                 totalFila = totalFila + array[0,fila1];
                 return totalFila;
@@ -23,7 +23,7 @@ namespace Test
             
             while ((columna<columnas) && suma)
             {
-                for (int j = 1; j <= filas; j++)
+                for (int j = 1; j <= filas; )
                 {
                     totalFilaAux = totalFilaAux + array[columnas,filas];
                     return totalFilaAux;
