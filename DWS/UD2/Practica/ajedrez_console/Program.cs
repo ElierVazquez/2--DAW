@@ -1,4 +1,6 @@
-﻿namespace ChessAPI
+﻿using ChessAPI.Model;
+
+namespace ChessAPI
 {
     class Program
     {

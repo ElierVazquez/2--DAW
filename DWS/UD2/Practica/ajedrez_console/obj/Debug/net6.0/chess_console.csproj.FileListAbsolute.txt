@@ -13,3 +13,18 @@
 /home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/obj/Debug/net6.0/ref/chess_console.dll
 /home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/obj/Debug/net6.0/chess_console.pdb
 /home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/obj/Debug/net6.0/chess_console.genruntimeconfig.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/chess_console
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/chess_console.deps.json
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/chess_console.runtimeconfig.json
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/chess_console.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/ref/chess_console.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/bin/Debug/net6.0/chess_console.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.csproj.AssemblyReference.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.GeneratedMSBuildEditorConfig.editorconfig
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.AssemblyInfoInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.AssemblyInfo.cs
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.csproj.CoreCompileInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/ref/chess_console.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.genruntimeconfig.cache

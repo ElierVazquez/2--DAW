@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/carlos/.nuget/packages/": {}
+    "/home/horabaixa/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/chess_console.csproj",
+      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
       "projectName": "chess_console",
-      "projectPath": "/home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/chess_console.csproj",
-      "packagesPath": "/home/carlos/.nuget/packages/",
-      "outputPath": "/home/carlos/Escritorio/2324/DWS/PRACTICAS/PRIMERAÇ/Primera practica DWS 2324/chess_console/obj/",
+      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
+      "packagesPath": "/home/horabaixa/.nuget/packages/",
+      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/carlos/.nuget/NuGet/NuGet.Config"
+        "/home/horabaixa/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
