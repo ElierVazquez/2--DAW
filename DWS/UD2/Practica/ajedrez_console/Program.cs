@@ -10,7 +10,7 @@ namespace ChessAPI
             ChessGame chess = new ChessGame();
             chess.DrawBoard();
             chess.TryToMove();
-            chess.DrawBoard();
+            // chess.DrawBoard();
             var code = chess.GetBoardAsStringToChessWeb();
             Console.WriteLine(code);
             Console.WriteLine("End. Chess Console Test...");
