@@ -28,3 +28,18 @@
 /home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/ref/chess_console.dll
 /home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.pdb
 /home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/Debug/net6.0/chess_console.genruntimeconfig.cache
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\bin\Debug\net6.0\chess_console.exe
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\bin\Debug\net6.0\chess_console.deps.json
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\bin\Debug\net6.0\chess_console.runtimeconfig.json
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\bin\Debug\net6.0\chess_console.dll
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\bin\Debug\net6.0\chess_console.pdb
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.GeneratedMSBuildEditorConfig.editorconfig
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.AssemblyInfoInputs.cache
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.AssemblyInfo.cs
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.csproj.CoreCompileInputs.cache
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.dll
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\refint\chess_console.dll
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.pdb
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.genruntimeconfig.cache
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\ref\chess_console.dll
+E:\2--DAW\DWS\UD2\Practica\ajedrez_console\obj\Debug\net6.0\chess_console.csproj.AssemblyReference.cache

@@ -10,8 +10,7 @@ namespace ChessAPI
         {
             board = new Piece[8, 8];
 
-            //TODO Practica 02_7
-            // Este constructor colocará las piezas en el tablero
+            //DONE Practica 02_7
             board[0,0] = new Rook(Piece.ColorEnum.BLACK);
             board[0,1] = new Knight(Piece.ColorEnum.BLACK);
             board[0,2] = new Bishop(Piece.ColorEnum.BLACK);
@@ -25,6 +24,20 @@ namespace ChessAPI
             {
                 board[1,cont] = new Pawn(Piece.ColorEnum.BLACK);
             }
+
+            for (int cont = 0; cont < board.GetLength(1); cont++)
+            {
+                board[6,cont] = new Pawn(Piece.ColorEnum.WHITE);
+            }
+
+            board[7,0] = new Rook(Piece.ColorEnum.WHITE);
+            board[7,1] = new Knight(Piece.ColorEnum.WHITE);
+            board[7,2] = new Bishop(Piece.ColorEnum.WHITE);
+            board[7,3] = new Queen(Piece.ColorEnum.WHITE);
+            board[7,4] = new King(Piece.ColorEnum.WHITE);
+            board[7,5] = new Bishop(Piece.ColorEnum.WHITE);
+            board[7,6] = new Knight(Piece.ColorEnum.WHITE);
+            board[7,7] = new Rook(Piece.ColorEnum.WHITE);
         }
         public Piece GetPiece(int row, int column)
         {
@@ -49,10 +62,7 @@ namespace ChessAPI
 
         }
 
-        // TODO Practica 02_4
-        //Este método escribira por consola el tablero,
-        //haciendo un salto de línea después de cada fila.
-        //Para ver el formato del pintado, leer enunciado de la práctica
+        // DONE Practica 02_4
         public void Draw()
         {
             for (int row = 0; row < board.GetLength(0); row++)
@@ -63,13 +73,13 @@ namespace ChessAPI
                         Console.Write(board[row, column].GetCode());
                     else
                     {
-                        if ((row+1)%(column+1)==0)
+                        if (((row+1+column+1) % 2) == 0)
                         {
-                            Console.Write((row+1)%(column+1));
+                            Console.Write("|0000|");
                         }
                         else
                         {
-                            Console.Write((row+1)%(column+1));
+                            Console.Write("|XXXX|");
                         }
                     }
                 }
