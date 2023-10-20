@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/Introduccion2/Introduccion2.csproj",
+      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/dotnet/Introduccion2/Introduccion2.csproj",
       "projectName": "Introduccion2",
-      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/Introduccion2/Introduccion2.csproj",
+      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/dotnet/Introduccion2/Introduccion2.csproj",
       "packagesPath": "/home/horabaixa/.nuget/packages/",
-      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/dotnet/Ud2/Introduccion2/obj/",
+      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/dotnet/Introduccion2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/horabaixa/.nuget/NuGet/NuGet.Config"

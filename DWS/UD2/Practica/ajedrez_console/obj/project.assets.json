@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\elier\\.nuget\\packages\\": {}
+    "/home/horabaixa/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\2--DAW\\DWS\\UD2\\Practica\\ajedrez_console\\chess_console.csproj",
+      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
       "projectName": "chess_console",
-      "projectPath": "E:\\2--DAW\\DWS\\UD2\\Practica\\ajedrez_console\\chess_console.csproj",
-      "packagesPath": "C:\\Users\\elier\\.nuget\\packages\\",
-      "outputPath": "E:\\2--DAW\\DWS\\UD2\\Practica\\ajedrez_console\\obj\\",
+      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
+      "packagesPath": "/home/horabaixa/.nuget/packages/",
+      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elier\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/horabaixa/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -49,8 +49,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -59,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.415\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.122/RuntimeIdentifierGraph.json"
       }
     }
   }

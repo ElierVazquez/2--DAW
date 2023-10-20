@@ -39,13 +39,12 @@ namespace ChessAPI
             board[7,6] = new Knight(Piece.ColorEnum.WHITE);
             board[7,7] = new Rook(Piece.ColorEnum.WHITE);
         }
+        
         public Piece GetPiece(int row, int column)
         {
             return board[row, column];
         }
 
-
-        
         public void Move(Movement movement)
         {
             if (movement.IsValid())
