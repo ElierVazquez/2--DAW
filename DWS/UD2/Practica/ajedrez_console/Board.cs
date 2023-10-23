@@ -52,13 +52,14 @@ namespace ChessAPI
                 _Move(movement);
             }
         }
-        // TODO Practica 02_3
-        //Implementar el método _move, que no realizará ninguna validación
-        //simplemente moverá en la matriz la pieza. Realiza modificaciones
-        //en otras clases si lo consideras necesario...
+        // DONE Practica 02_3
         private void _Move(Movement movement)
         {
+            
+            Piece fromPiece = board[movement.GetFromPositionRow(), movement.GetFromPositionColumn()];
 
+            board[movement.GetToPositionRow(), movement.GetToPositionColumn()] = fromPiece;
+            board[movement.GetFromPositionRow(), movement.GetFromPositionColumn()] = null;
         }
 
         // DONE Practica 02_4

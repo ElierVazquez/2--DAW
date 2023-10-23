@@ -34,5 +34,26 @@ namespace ChessAPI
 
             return true;
         }
+
+        // Añadidos Getters para extraer las filas y columnas del movimiento
+        public int GetFromPositionRow()
+        {
+            return this._fromBoardPosition.Row;
+        }
+
+        public int GetFromPositionColumn()
+        {
+            return this._fromBoardPosition.Column;
+        }
+
+        public int GetToPositionRow()
+        {
+            return this._toBoardPosition.Row;
+        }
+
+        public int GetToPositionColumn()
+        {
+            return this._toBoardPosition.Column;
+        }
     }
 }
