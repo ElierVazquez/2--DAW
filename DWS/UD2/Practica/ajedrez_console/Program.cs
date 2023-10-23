@@ -14,6 +14,7 @@ namespace ChessAPI
             chess.TryToMove();
 
             chess.DrawBoard();
+            Console.WriteLine();
             var code = chess.GetBoardAsStringToChessWeb();
             Console.WriteLine(code);
             Console.WriteLine("End. Chess Console Test...");
