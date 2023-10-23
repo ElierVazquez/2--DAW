@@ -15,12 +15,12 @@ namespace ChessAPI
             this.board.Draw();
         }
 
-        public void TryToMove(Movement movement)
+        public void TryToMove()
         {
-            // TODO Practica 02_6
-            //Instancia un movimiento dentro del tablero, desde una posición
-            //en la que haya una pieza hasta otro. De momento no se realizan
-            //validaciones salvo que sea una posición que esté dentro del tablero.
+            // DONE Practica 02_6
+            BoardPosition fromPosition = new BoardPosition(1,0);
+            BoardPosition toPosition = new BoardPosition(3,0);
+            Movement movement = new Movement(fromPosition, toPosition);
             
             this.board.Move(movement);
         }

@@ -11,10 +11,7 @@ namespace ChessAPI
             chess.DrawBoard();
             Console.WriteLine();
 
-            BoardPosition from = new BoardPosition(1,0);
-            BoardPosition to = new BoardPosition(3,0);
-            Movement move = new Movement(from, to);
-            chess.TryToMove(move);
+            chess.TryToMove();
 
             chess.DrawBoard();
             var code = chess.GetBoardAsStringToChessWeb();
