@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#board {
+    width: 33vw;
+    height: 33vw;
+    max-width: 635px;
+    max-height: 635px;
+    transform: translate(-50%, -50%);
+    margin-top: 50vh;
+    margin-left: 50vw;
+    border: 5px solid rgb(201, 155, 95);
+    position: relative;
+}
+
+.section {
+    width: 12.5%;
+    height: 12.5%;
+    float: left;
+    position: relative;
+}
+
+.section img {
+    width: 100%;
+}
