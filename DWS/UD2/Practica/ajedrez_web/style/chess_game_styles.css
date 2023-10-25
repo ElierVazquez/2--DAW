@@ -24,4 +24,19 @@
 
 .section img {
     width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.White {
+    background-image: url("../img/white_section.png");
+}
+
+.Black {
+    background-image: url("../img/black_section.png");
+}
+
+.piece {
+    width: 100%;
+    z-index: 1;
 }

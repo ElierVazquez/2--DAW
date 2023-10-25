@@ -7,28 +7,49 @@
 </head>
 <body>
     <?php
-        echo "<div id=\"board\">";
+        $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
 
-        for ($row = 0; $row < 8; $row++)
+        function DrawChessGame($board)
         {
-            for ($column = 0; $column < 8; $column++)
+            $rowsGame = explode(";", $board);
+            $game = array();
+
+            for ($i = 0; $i < count($rowsGame); $i++)
             {
-                if (($row + $column) % 2== 0)
+                $game[$i] = explode(",", $rowsGame[$i]);
+            }
+
+            echo "<div id=\"board\">";
+
+            for ($row = 0; $row < 8; $row++)
+            {
+                for ($column = 0; $column < 8; $column++)
                 {
-                    echo "<div id=\"section$row|$column\" class=\"section\">
-                        <img src=\"img/white_section.png\" alt=\"White section\">
-                    </div>";
-                }
-                else
-                {
-                    echo "<div id=\"section$row|$column\" class=\"section\">
-                        <img src=\"img/black_section.png\" alt=\"Black section\">
-                    </div>";
+                    if (($row + $column) % 2== 0)
+                    {
+                        echo "<div id=\"section$row|$column\" class=\"White section\">";
+                            if ($game[$row][$column] != 0)
+                            {
+                                echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                            }
+                        echo "</div>";
+                    }
+                    else
+                    {
+                        echo "<div id=\"section$row|$column\" class=\"Black section\">";
+                            if ($game[$row][$column] != 0)
+                            {
+                                echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                            }
+                        echo "</div>";
+                    }
                 }
             }
+
+            echo "</div>";
         }
 
-        echo "</div>";
+        DrawChessGame($board);
     ?>
 </body>
 </html>
