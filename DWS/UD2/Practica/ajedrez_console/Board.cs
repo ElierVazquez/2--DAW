@@ -107,7 +107,14 @@ namespace ChessAPI
                         result += "0";
                     }
 
-                    result += ",";
+                    if (j == board.GetLength(1) - 1)
+                    {
+                        result += ";";
+                    }
+                    else
+                    {
+                        result += ",";
+                    }
                 }
             }
 
