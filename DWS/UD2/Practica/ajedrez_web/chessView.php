@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Chess</title>
     <link rel="stylesheet" href="style/chess_game_styles.css">
+    <script src="js/movablePieces.js"></script>
 </head>
 <body>
     <?php
@@ -30,7 +31,7 @@
                         echo "<div id=\"section$row|$column\" class=\"White section\">";
                             if ($game[$row][$column] != 0)
                             {
-                                echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                                echo "<img draggable=\"true\" src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
                             }
                         echo "</div>";
                     }
@@ -39,7 +40,7 @@
                         echo "<div id=\"section$row|$column\" class=\"Black section\">";
                             if ($game[$row][$column] != 0)
                             {
-                                echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                                echo "<img draggable=\"true\" src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
                             }
                         echo "</div>";
                     }
