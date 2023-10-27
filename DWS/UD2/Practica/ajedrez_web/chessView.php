@@ -20,6 +20,19 @@
                 $game[$i] = explode(",", $rowsGame[$i]);
             }
 
+            echo "<div id=\"game\">";
+
+            echo "<div id=\"blackCatches\">";
+
+            for ($i = 0; $i < 16; $i++)
+            {
+                echo "<div class=\"deathZone\">";
+                    echo "<img src=\"img/PAWH.png\">";
+                echo "</div>";
+            }
+
+            echo "</div>";
+
             echo "<div id=\"board\">";
 
             for ($row = 0; $row < 8; $row++)
@@ -46,6 +59,19 @@
                     }
                 }
             }
+
+            echo "</div>";
+
+            echo "<div id=\"whiteCatches\">";
+
+            for ($i = 0; $i < 16; $i++)
+            {
+                echo "<div class=\"deathZone\">";
+                    echo "<img src=\"img/PABL.png\">";
+                echo "</div>";
+            }
+
+            echo "</div>";
 
             echo "</div>";
         }
