@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        img {
+            width: 10%;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <img id="sobre" src="img/sobre_cerrado.png" alt="sobre_cerrado" onclick="abrirSobre()">
+    <p>Fer clic a la imatge per obrir i tancar el sobre</p>
+
+    <script>
+        function abrirSobre() {
+            let foto = document.getElementById("sobre");
+
+            foto.src = "img/sobre_abierto.png";
+            foto.setAttribute("onclick", "cerrarSobre()");
+        }
+
+        function cerrarSobre() {
+            let foto = document.getElementById("sobre");
+
+            foto.src = "img/sobre_cerrado.png";
+            foto.setAttribute("onclick", "abrirSobre()");
+        }
+    </script>
+</body>
+</html>
