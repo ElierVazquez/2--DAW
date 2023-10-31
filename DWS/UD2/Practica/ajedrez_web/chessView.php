@@ -13,32 +13,30 @@
 
         function DrawChessGame($board)
         {
-            $contPABL = 0;
-            $contROBL = 0;
-            $contKNBL = 0;
-            $contBIBL = 0;
-            $contQUBL = 0;
-            $contKIBL = 0;
+            $contPieces = array
+            (
+                "PABL" => 0,
+                "ROBL" => 0,
+                "KNBL" => 0,
+                "BIBL" => 0,
+                "QUBL" => 0,
+                "KIBL" => 0,
+                "PAWH" => 0,
+                "ROWH" => 0,
+                "KNWH" => 0,
+                "BIWH" => 0,
+                "QUWH" => 0,
+                "KIWH" => 0
+            );
 
-            $contPAWH = 0;
-            $contROWH = 0;
-            $contKNWH = 0;
-            $contBIWH = 0;
-            $contQUWH = 0;
-            $contKIWH = 0;
-
-            $boardBlackPieces = array
+            $boardPieces = array
             (
                 "PABL" => 8,
                 "ROBL" => 2,
                 "KNBL" => 2,
                 "BIBL" => 2,
                 "QUBL" => 1,
-                "KIBL" => 1
-            );
-
-            $boardWhitePieces = array
-            (
+                "KIBL" => 1,
                 "PAWH" => 8,
                 "ROWH" => 2,
                 "KNWH" => 2,
@@ -64,22 +62,22 @@
                     switch ($game[$row][$column])
                     {
                         case "PAWH":
-                            $contPAWH++;
+                            $contPieces["PAWH"]++;
                             break;
                         case "ROWH":
-                            $contROWH++;
+                            $contPieces["ROWH"]++;
                             break;
                         case "KNWH":
-                            $contKNWH++;
+                            $contPieces["KNWH"]++;
                             break;
                         case "BIWH":
-                            $contBIWH++;
+                            $contPieces["BIWH"]++;
                             break;
                         case "QUWH":
-                            $contQUWH++;
+                            $contPieces["QUWH"]++;
                             break;
                         case "KIWH":
-                            $contKIWH++;
+                            $contPieces["KIWH"]++;
                             break;
                     }
                 }
@@ -87,37 +85,37 @@
 
             echo "<div id=\"blackCatches\">";
 
-            for ($i = 0; $i < ($boardWhitePieces["PAWH"] - $contPAWH); $i++)
+            for ($i = 0; $i < ($boardPieces["PAWH"] - $contPieces["PAWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/PAWH.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardWhitePieces["ROWH"] - $contROWH); $i++)
+            for ($i = 0; $i < ($boardPieces["ROWH"] - $contPieces["ROWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/ROWH.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardWhitePieces["KNWH"] - $contKNWH); $i++)
+            for ($i = 0; $i < ($boardPieces["KNWH"] - $contPieces["KNWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/KNWH.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardWhitePieces["BIWH"] - $contBIWH); $i++)
+            for ($i = 0; $i < ($boardPieces["BIWH"] - $contPieces["BIWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/BIWH.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardWhitePieces["QUWH"] - $contQUWH); $i++)
+            for ($i = 0; $i < ($boardPieces["QUWH"] - $contPieces["QUWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/QUWH.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardWhitePieces["KIWH"] - $contKIWH); $i++)
+            for ($i = 0; $i < ($boardPieces["KIWH"] - $contPieces["KIWH"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/KIWH.png\">";
@@ -162,22 +160,22 @@
                     switch ($game[$row][$column])
                     {
                         case "PABL":
-                            $contPABL++;
+                            $contPieces["PABL"]++;
                             break;
                         case "ROBL":
-                            $contROBL++;
+                            $contPieces["ROBL"]++;
                             break;
                         case "KNBL":
-                            $contKNBL++;
+                            $contPieces["KNBL"]++;
                             break;
                         case "BIBL":
-                            $contBIBL++;
+                            $contPieces["BIBL"]++;
                             break;
                         case "QUBL":
-                            $contQUBL++;
+                            $contPieces["QUBL"]++;
                             break;
                         case "KIBL":
-                            $contKIBL++;
+                            $contPieces["KIBL"]++;
                             break;
                     }
                 }
@@ -185,37 +183,37 @@
 
             echo "<div id=\"whiteCatches\">";
 
-            for ($i = 0; $i < ($boardBlackPieces["PABL"] - $contPABL); $i++)
+            for ($i = 0; $i < ($boardPieces["PABL"] - $contPieces["PABL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/PABL.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardBlackPieces["ROBL"] - $contROBL); $i++)
+            for ($i = 0; $i < ($boardPieces["ROBL"] - $contPieces["ROBL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/ROBL.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardBlackPieces["KNBL"] - $contKNBL); $i++)
+            for ($i = 0; $i < ($boardPieces["KNBL"] - $contPieces["KNBL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/KNBL.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardBlackPieces["BIBL"] - $contBIBL); $i++)
+            for ($i = 0; $i < ($boardPieces["BIBL"] - $contPieces["BIBL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/BIBL.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardBlackPieces["QUBL"] - $contQUBL); $i++)
+            for ($i = 0; $i < ($boardPieces["QUBL"] - $contPieces["QUBL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/QUBL.png\">";
                 echo "</div>";
             }
-            for ($i = 0; $i < ($boardBlackPieces["KIBL"] - $contKIBL); $i++)
+            for ($i = 0; $i < ($boardPieces["KIBL"] - $contPieces["KIBL"]); $i++)
             {
                 echo "<div class=\"deathZone\">";
                     echo "<img src=\"img/KIBL.png\">";
