@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix el radi del cercle:</p>
+    <input id="num" type="text">
+    <button onclick="calculosCirculo()">Submit</button>
+    <p id="res"></p>
+
+    <script>
+        function calculosCirculo(){
+
+            let radio = document.getElementById("num").value;
+            let output = document.getElementById("res");
+
+            if (!isNaN(document.getElementById("num").value)) {
+                let area = Math.PI * (radio * radio);
+                let longitud = 2 * Math.PI * radio;
+
+                document.getElementById("res").innerHTML = "L'àrea és " + area + " i la longitud " + longitud;
+            } else {
+                document.getElementById("res").innerHTML = "Es obligatorio escribir un número";
+            }
+        }
+    </script>
+</body>
+</html>

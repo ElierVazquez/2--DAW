@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="mecachis" style="color: red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos ipsam quod perspiciatis suscipit ratione libero harum provident nisi ad consectetur deleniti voluptatibus ipsum commodi animi temporibus odit culpa, laboriosam possimus nesciunt veritatis? Explicabo, at.</p>
+
+    <script>
+        window.onload = function cambioPigmento() {
+            let texto = document.getElementById("mecachis");
+
+            texto.onmouseover = function() {texto.style.color = "blue"};
+            texto.onmouseout = function() {texto.style.color = "red"};
+        }
+    </script>
+</body>
+</html>
