@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix els coeficients de l'equació:</p>
+    <input id="primerInput" type="number">
+    X+
+    <input id="segundoInput" type="number">
+    =0
+    <br> <br>
+
+    <p id="res">Resultat: </p>
+
+    <br> <br>
+
+    <button onclick="calcularCoeficiente()">Calcular</button>
+
+    <script>
+        function calcularCoeficiente() {
+            let co1 = document.getElementById("primerInput").value;
+            let co2 = document.getElementById("segundoInput").value;
+
+            let x = -co2 / co1;
+
+            document.getElementById("res").innerHTML = "Resultat: " + x;
+        }
+    </script>
+</body>
+</html>
