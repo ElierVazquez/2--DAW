@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        $board = "rnbqkbnr/pppppppp/8/00000000/00000000/00000000/PPPPPPPP/RNBQKBNR";
+        $board = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
 
 
         function DrawChessGame($board)
@@ -56,9 +56,10 @@
 
                 for ($column = 0; $column < count($game[$row]); $column++)
                 {
-                    if ($game[$row][$column] == range(1, 8))
+                    // Aquí
+                    if (is_integer($game[$row][$column]))
                     {
-                        // Aquí
+                        echo is_integer($game[$row][$column]);
                     }
                 }
             }
