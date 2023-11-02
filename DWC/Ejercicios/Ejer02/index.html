@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix un nombre dins l'interval [-1, 1]:</p>
+    <input id="validar" type="number">
+    <br> <br>
+    <button onclick="validarNum()">Validar</button>
+    <p id="text"></p>
+    <script>
+        function validarNum()
+        {
+            let element = document.getElementById("validar").value;
+
+            if (element <= 1 && element >= -1)
+                document.getElementById("text").innerHTML="Valor correcte";
+            else
+                document.getElementById("text").innerHTML="Valor erroni";
+        }
+    </script>
+</body>
+</html>
