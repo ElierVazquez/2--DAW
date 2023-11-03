@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <p id="res4"></p>
+    <p id="res5"></p>
+    <p id="res6"></p>
+
+    <script>
+        window.onload = function magia() {
+            let text = window.prompt("Escribe una frase");
+            let array = text.split(" ");
+
+            document.getElementById("res1").innerHTML = array.length;
+            document.getElementById("res2").innerHTML = array[0] + " " + array[array.length-1];
+            document.getElementById("res3").innerHTML = array.reverse();
+            document.getElementById("res4").innerHTML = array.sort();
+            document.getElementById("res5").innerHTML = array.sort().reverse();
+            let palo = text.replace(" ", "");
+            document.getElementById("res6").innerHTML = palindromo(palo);
+        }
+
+        function palindromo(str) {
+            const inverso = str.split("").reverse().join("");
+
+            return inverso === str ? "es palindromo" : "no es palindromo";
+        }
+    </script>
+</body>
+</html>
