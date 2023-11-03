@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix un email: </p> <input id="email" type="email">
+    <button onclick="separarEmail()">Enviar</button>
+    <p id="usu">L'usuari és: </p>
+    <p id="dom">El domini és: </p>
+    <script>
+        function separarEmail() {
+            let email = document.getElementById("email").value;
+            let posArroba = email.indexOf("@");
+            let dato1 = email.slice(0, posArroba);
+            let dato2 = email.slice(posArroba + 1);
+
+            document.getElementById("usu").innerHTML = "L'usuari és: " + dato1;
+            document.getElementById("dom").innerHTML = "El domini és: " + dato2;
+        }
+    </script>
+</body>
+</html>
