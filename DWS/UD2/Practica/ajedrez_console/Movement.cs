@@ -11,8 +11,6 @@ namespace ChessAPI
             _toBoardPosition = toBoardPosition;
         }
 
-
-        /// DONE Practica 02_1
         public bool IsValid()
         {
             if (_toBoardPosition.Column > 7 || _toBoardPosition.Row > 7)

@@ -10,7 +10,6 @@ namespace ChessAPI
         {
             board = new Piece[8, 8];
 
-            //DONE Practica 02_7
             board[0,0] = new Rook(Piece.ColorEnum.BLACK);
             board[0,1] = new Knight(Piece.ColorEnum.BLACK);
             board[0,2] = new Bishop(Piece.ColorEnum.BLACK);
@@ -52,7 +51,7 @@ namespace ChessAPI
                 _Move(movement);
             }
         }
-        // DONE Practica 02_3
+
         private void _Move(Movement movement)
         {
             
@@ -62,7 +61,6 @@ namespace ChessAPI
             board[movement.GetFromPositionRow(), movement.GetFromPositionColumn()] = null;
         }
 
-        // DONE Practica 02_4
         public void Draw()
         {
             for (int row = 0; row < board.GetLength(0); row++)
@@ -86,7 +84,7 @@ namespace ChessAPI
                 Console.WriteLine();
             }
         }
-        // DONE Practica 02_5
+        
         public string GetBoardState()
         {
             string result = string.Empty;

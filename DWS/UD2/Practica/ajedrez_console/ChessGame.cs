@@ -17,7 +17,6 @@ namespace ChessAPI
 
         public void TryToMove()
         {
-            // DONE Practica 02_6
             BoardPosition fromPosition = new BoardPosition(1,0);
             BoardPosition toPosition = new BoardPosition(3,0);
             Movement movement = new Movement(fromPosition, toPosition);

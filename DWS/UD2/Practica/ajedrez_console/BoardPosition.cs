@@ -1,6 +1,5 @@
 namespace ChessAPI
 {
-    /// DONE Practica 02_2
     public class BoardPosition
     {
         private int _row;
