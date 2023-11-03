@@ -8,8 +8,9 @@
 </head>
 <body>
     <?php
-        $board = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
-
+        $board = "1r1k1/p1p2pp1/1q1p3p/1P3P2/1P6/2n1Q3/PB4PP/4R1K1";
+        // rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR
+        // 
 
         function DrawChessGame($board)
         {
@@ -50,18 +51,77 @@
 
             $sectionColor = "";
 
-            for ($row = 0; $row < count($rowsGame); $row++)
+            for ($row = 0; $row < 8; $row++)
             {
                 $game[$row] = str_split($rowsGame[$row]);
 
-                for ($column = 0; $column < count($game[$row]); $column++)
+                $count = count($game[$row]);
+
+                if ($count < 8) 
                 {
-                    // Aquí
-                    if (is_integer($game[$row][$column]))
+                    for ($i = 0; $i < $count; $i++)
                     {
-                        echo is_integer($game[$row][$column]);
+                        $game[$row][$count+$i] = "0";
                     }
                 }
+
+                for ($column = 0; $column < 8; $column++)
+                {
+                    $auxPiece = $game[$row][$column+1];
+                    switch ($game[$row][$column])
+                    {
+                        case "1":
+                            $num = intval($game[$row][$column]);
+                            $game[$row][$column] = "0";
+                            break;
+                        case "2":
+                            $num = intval($game[$row][$column]);
+                            array_splice($game[$row], $column, $num-1, "0");
+                            break;
+                        case "3":
+                            $num = intval($game[$row][$column]);
+                            array_splice($game[$row], $column, $num-1, "0");
+                            break;
+                        case "4":
+                            $num = intval($game[$row][$column]);
+                            array_splice($game[$row], $column, $num-1, "0");
+                            break;
+                        case "5":
+                            $num = intval($game[$row][$column]);
+                            array_splice($game[$row], $column, $num, "0");
+                            break;
+                        case "6":
+                            $num = intval($game[$row][$column]);
+                            for ($cont = 0; $cont < $num; $cont++)
+                            {
+                                $game[$row][$column+$cont] = "0";
+                            }
+                            break;
+                        case "7":
+                            $num = intval($game[$row][$column]);
+                            for ($cont = 0; $cont < $num; $cont++)
+                            {
+                                $game[$row][$column+$cont] = "0";
+                            }
+                            break;
+                        case "8":
+                            $num = intval($game[$row][$column]);
+                            for ($cont = 0; $cont < $num; $cont++)
+                            {
+                                $game[$row][$column+$cont] = "0";
+                            }
+                            break;
+                    }
+                }
+            }
+
+            for ($row = 0; $row < 8; $row++)
+            {
+                for ($column = 0; $column < 8; $column++)
+                {
+                    echo $game[$row][$column];
+                }
+                echo "<br>";
             }
 
             echo "<div id=\"game\">";
@@ -153,7 +213,11 @@
                     echo "<div id=\"section$row|$column\" class=\"{$sectionColor} section\">";
                         if ($game[$row][$column] != 0)
                         {
-                            echo "<img draggable=\"true\" src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                            echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                        }
+                        else 
+                        {
+                            echo $game[$row][$column];
                         }
                     echo "</div>";
                 }
