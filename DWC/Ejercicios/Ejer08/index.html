@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="origin">The reference contains descriptions and examples of all string properties and methods.</p>
+    <button onclick="sliceUp()">Submit</button>
+    <p id="res1"></p>
+    <p id="res2"></p>
+
+    <script>
+        function sliceUp() {
+            let text = document.getElementById("origin").innerHTML;
+            let len = text.length;
+
+            document.getElementById("res1").innerHTML = text.slice(0, len/2);
+            document.getElementById("res2").innerHTML = text.slice(len/2);
+        }
+    </script>
+</body>
+</html>
