@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="res"></p>
+    <script>
+        let res = document.getElementById("res");
+
+        let date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth()+1;
+
+        if (day < 10) {
+            day = "0" + date.getDate();
+        }
+
+        if (month < 10) {
+            month = "0" + (date.getMonth()+1);
+        }
+
+        let year = date.getFullYear();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+        
+        res.innerHTML = "Fecha actual: " + day + "-" + month + "-" + year + " " + hour + ":" + minutes;
+    </script>
+</body>
+</html>
