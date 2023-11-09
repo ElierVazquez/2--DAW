@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="uno"></p>
+    <p id="dos"></p>
+    <p id="tres"></p>
+    <script>
+        let fecha = new Date(2009, 2, 21, 12, 15);
+
+        fecha.setDate(fecha.getDate()+3);
+        document.getElementById("uno").innerHTML = fecha;
+
+        fecha.setMonth(fecha.getMonth()+5);
+        document.getElementById("dos").innerHTML = fecha;
+
+        fecha.setFullYear(fecha.getFullYear()-10);
+        document.getElementById("tres").innerHTML = fecha;
+    </script>
+</body>
+</html>
