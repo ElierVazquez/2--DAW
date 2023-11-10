@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <script>
+        let valors = [true, 5, false, "hola", "Adios", 2];
+        let suma = 0;
+        let indiPal = 0, lenPal = 0;
+
+        let res1 = document.getElementById("res1");
+        let res2 = document.getElementById("res2");
+
+        for (i = 0; i < valors.length; i++) {
+            if (typeof valors[i] == "number") {
+                suma = suma + valors[i];
+            }
+
+            if (typeof valors[i] == "string") {
+                if (valors[i].length > lenPal) {
+                    lenPal = valors[i].length;
+                    indiPal = i;
+                }
+            }
+        }
+
+        res1.innerHTML = valors[indiPal];
+        res2.innerHTML = suma;
+    </script>
+</body>
+</html>
