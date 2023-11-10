@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix la primera data: </p> <input type="date" name="primeraFecha" id="primeraFecha">
+    <p>Introdueix la segona data: </p> <input type="date" name="segundaFecha" id="segundaFecha">
+    <br> <br>
+    <button onclick="calcFecha()">Calcular</button>
+    <p id="res"></p>
+
+    <script>
+        function calcFecha() {
+            let primeraFecha = document.getElementById("primeraFecha").value;
+            let segundaFecha = document.getElementById("segundaFecha").value;
+            let res = document.getElementById("res");
+
+            if (primeraFecha > segundaFecha) {
+                res.innerHTML = "La data major es " + primeraFecha;
+            } else {
+                res.innerHTML = "La data major es " + segundaFecha;
+            }
+        }
+    </script>
+</body>
+</html>
