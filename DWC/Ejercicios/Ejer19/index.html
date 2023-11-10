@@ -18,9 +18,7 @@
         for (i = 0; i < valors.length; i++) {
             if (typeof valors[i] == "number") {
                 suma = suma + valors[i];
-            }
-
-            if (typeof valors[i] == "string") {
+            } else if (typeof valors[i] == "string") {
                 if (valors[i].length > lenPal) {
                     lenPal = valors[i].length;
                     indiPal = i;
