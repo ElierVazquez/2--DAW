@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        let nacimiento = new Date("07/01/1984")
+        let fechaActual = new Date();
+
+        let edad = fechaActual - nacimiento;
+
+        document.write("Mi pana tiene " + Math.trunc(edad/1000/60/60/24/365) + " añazos.");
+    </script>
+</body>
+</html>
