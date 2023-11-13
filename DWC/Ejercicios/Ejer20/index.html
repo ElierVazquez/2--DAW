@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <input id="src" type="text">
+    <button onclick="letraDNI()">Submit</button>
+    <p id="res"></p>
+    <script>
+        var lletres = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+        function letraDNI() {
+            let src = document.getElementById("src").value;
+            let res = document.getElementById("res");
+
+            if (src < 0 || src > 99999999) {
+                res.innerHTML = "Ponlo bien tontito"
+            } else {
+                let calc = src % 23;
+
+                let letra = lletres[calc];
+
+                res.innerHTML = src + letra;
+            }
+        }
+    </script>
+</body>
+</html>
