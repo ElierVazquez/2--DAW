@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buenos días</h1>
+    <p>Tienes que intentar adivinar un número del 1 al 100</p>
+    <h3>¡EL PREMIO ES UNA TARTA!</h3>
+    <br>
+    <button onclick="iniciar()">Jugar</button>
+
+    <script>
+        function iniciar() {
+            document.write("<input id='src' type='text'></input> ");
+            document.write("<button onclick=''>Probar suerte</button>");
+            document.write("<p id='res'>Prueba suerte</p>");
+            let rand = trunc(Math.random() * 100 + 1);
+        }
+
+        function numMagico(rand) {
+
+        }
+    </script>
+</body>
+</html>
