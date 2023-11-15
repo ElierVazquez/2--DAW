@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Chess</title>
     <link rel="stylesheet" href="style/chess_game_styles.css">
+    <script src="js/chess_game.js"></script>
 </head>
 <body>
     <?php
@@ -29,7 +30,7 @@
                     echo "<div id=\"section$row|$column\" class=\"{$sectionColor} section\">";
                         if ($game[$row][$column] != 0)
                         {
-                            echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\">";
+                            echo "<img src=\"img/{$game[$row][$column]}.png\" class=\"piece\" onclick=\"\">";
                         }
                     echo "</div>";
                 }
