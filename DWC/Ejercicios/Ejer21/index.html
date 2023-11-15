@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p>Introdueix un nombre sencer:</p>
+    <input type="text" id="src"> <button onclick="factorial()">Submit</button>
+    <p id="res"></p>
+
+    <script>
+        function factorial() {
+            let src = document.getElementById("src").value;
+            let res = document.getElementById("res");
+
+            let sumFactorial = 1;
+
+            if (!isNaN(src) && src >= 0) {
+                if (src == 0) {
+                    sumFactorial = 1;
+                } else {
+                    for (let i = parseInt(src); i > 0; i--) {
+                        sumFactorial = sumFactorial * i;
+                    }
+                }
+
+                res.innerHTML = "El factorial de " + src + " es: " + sumFactorial;
+            } else {
+                res.innerHTML = "Por favor, introduce un valor adecuado."
+            }
+        }
+    </script>
+</body>
+</html>
