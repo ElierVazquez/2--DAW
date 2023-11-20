@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <p id="res4"></p>
+    <script>
+        let res1 = document.getElementById("res1");
+        let res2 = document.getElementById("res2");
+        let res3 = document.getElementById("res3");
+        let res4 = document.getElementById("res4");
+
+        let array = [];
+        for (cont = 0; cont < 8; cont++) {
+            let num = prompt("Introduzca un número");
+            array.push(parseInt(num));
+        }
+
+        res1.innerHTML = "Números introducidos: " + array;
+        res2.innerHTML = "SUMA = " + sumar(array);
+        res3.innerHTML = "SUMA de números > 36 = " + sumar36(array);
+        res4.innerHTML = "Quantitat de números > 50 = " + cont50(array);
+
+        function sumar(array){
+            let suma = 0;
+
+            for (cont = 0; cont < array.length; cont++) {
+                suma += array[cont];
+            }
+
+            return suma;
+        }
+
+        function sumar36(array) {
+            let suma = 0;
+
+            for (cont = 0; cont < array.length; cont++) {
+                if (array[cont] > 36)
+                    suma += array[cont];
+            }
+
+            return suma;
+        }
+
+        function cont50(array) {
+            let cont = 0;
+
+            array.forEach(element => {
+                if (array[element] > 50) {
+                    cont++;
+                }
+            });
+
+            return cont;
+        }
+    </script>
+</body>
+</html>
