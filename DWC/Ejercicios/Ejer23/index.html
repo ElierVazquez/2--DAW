@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <input id="src" type="text"> <button onclick="palindromo()">Submit</button>
+    <p id="res"></p>
+
+    <script>
+        function palindromo() {
+            let src = document.getElementById("src").value;
+            let res = document.getElementById("res");
+
+            var re = /[\W_]/g;
+
+            let lowRegStr = src.toLowerCase().replace(re, "");
+
+            let reverseStr = lowRegStr.split("").reverse().join(""); 
+  
+            if (reverseStr === lowRegStr) {
+                res.innerHTML = "Es palíndromo";
+            } else {
+                res.innerHTML = "No es palíndromo";
+            }
+        }
+    </script>
+</body>
+</html>
