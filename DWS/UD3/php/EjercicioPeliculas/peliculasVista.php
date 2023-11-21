@@ -10,12 +10,14 @@
         require("peliculasReglasNegocio.php");
         $id_categoria = $_POST["id_categoria"];
         $peliculasBL = new PeliculasReglasNegocio();
-        $datosPeliculas = $peliculasBL->obtener($id_categoria);
+        $datosPeliculas = $peliculasBL->obtenerPelis($id_categoria);
         
         foreach ($datosPeliculas as $pelicula)
         {
+            $id_peli = $pelicula->getID();
+
             echo "<div>";
-            echo "<a href=\"fichaPeliculaVista.php\" method=\"get\">";
+            echo "<a href=\"fichaPeliculaVista.php?ID=$id_peli\">";
             print($pelicula->getTitulo());
             echo "</a>";
             echo "</div>";
