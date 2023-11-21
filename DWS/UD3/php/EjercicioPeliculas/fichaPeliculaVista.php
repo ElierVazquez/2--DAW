@@ -1,11 +1,26 @@
 <!doctype html>
 <html>
 <head>
+    <style>
+        * {
+            text-align: center;
+        }
 
+        p {
+            border: 1px solid black;
+            width: 66%;
+            min-height: 5vh;
+            position: relative;
+            transform: translate(-50%);
+            margin-left: 50%;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding: 1%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Listado de peliculas </h1>
     <?php
         ini_set('display_errors', 'On');
         ini_set('html_errors', 0);
@@ -16,9 +31,9 @@
 
         foreach ($datosPeliculas as $pelicula)
         {
-            echo "<p>";
-            print("Título: ".$pelicula->getTitulo());
-            echo "</p>";
+            echo "<h1>";
+            print($pelicula->getTitulo());
+            echo "</h1>";
 
             echo "<p>";
             print("Año: ".$pelicula->getAnyo());
