@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego</title>
+</head>
+<body>
+    <div id="juego">
+        <h1>Pedra, paper, tisora!</h1>
+        <b id="jug1">Jugador 1</b> <b id="jug2">Jugador 2</b>
+        <p id="res1"></p> <p id="res2"></p>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        window.onload = function Jugar() {
+            let res = document.getElementById("res");
+            let res1 = document.getElementById("res1");
+            let res2 = document.getElementById("res2");
+
+            let mano1 = 0;
+            let mano2 = 0;
+
+            do {
+                mano1 = prompt("Jugador 1, escoge entre piedra(1), papel(2) o tijeras(3)");
+
+                if (isNaN(mano1) || (mano1>3 || mano1<1)) {
+                    alert("Por favor, introduce un valor adecuado");
+                    mano1 = 0;
+                }
+            } while (mano1>3 || mano1<1);
+
+            do {
+                mano2 = prompt("Jugador 2, escoge entre piedra(1), papel(2) o tijeras(3)");
+
+                if (isNaN(mano2) || (mano2>3 || mano2<1)) {
+                    alert("Por favor, introduce un valor adecuado");
+                    mano2 = 0;
+                }
+            } while (mano2>3 || mano2<1);
+
+            mano1 = parseInt(mano1);
+            mano2 = parseInt(mano2);
+
+            switch (mano1) {
+                case 1:
+                    res1.innerHTML = "&#129308;";
+                    break;
+                case 2:
+                    res1.innerHTML = "&#129306;";
+                    break;
+                case 3:
+                    res1.innerHTML = "&#128406;";
+                    break;
+            }
+
+            switch (mano2) {
+                case 1:
+                    res2.innerHTML = "&#129307;";
+                    break;
+                case 2:
+                    res2.innerHTML = "&#129306;";
+                    break;
+                case 3:
+                    res2.innerHTML = "&#128406;";
+                    break;
+                default:
+                    alert("Ha surgido un error");
+            }
+
+            //if () {
+
+            //}
+        }
+    </script>
+</body>
+</html>
