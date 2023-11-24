@@ -4,31 +4,67 @@
 }
 
 header {
-    margin-top: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     margin-left: 1vw;
     width: 98vw;
-    height: 15vh;
-    background-color: rgba(128, 104, 38, 0.9);
+    height: 12vh;
+    min-height: 60px;
+    background-color: #33333388;
     border-radius: 20px;
+}
+
+footer {
+    width: 98vw;
+    height: 12vh;
+    min-height: 60px;
+    background-color: #33333388;
+    border-radius: 20px;
+    position: absolute;
+    left: 1vw;
+    bottom: 2vh;
 }
 
 header h1 {
     text-align: center;
     color: bisque;
-    width: 100%;
-    height: 5vh;
-    margin-top: 1vw;
+    margin-left: 49vw;
+    margin-top: 6vh;
+    transform: translate(-50%, -50%);
+    display: block;
+    float: left;
+}
+
+footer a {
+    text-align: center;
+    color: bisque;
+    margin-left: 49vw;
+    margin-top: 6vh;
+    transform: translate(-50%, -50%);
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: bisque;
 }
 
 #buttons {
-    height: 10vw;
+    display: block;
+    float: right;
+    transform: translate(0%, -50%);
+    margin-top: 6vh;
 }
 
 #buttons button {
-    width: 10vw;
-    height: 5vw;
-    float: right;
+    width: 5vw;
+    height: 3vw;
+    min-width: 80px;
+    min-height: 50px;
+    max-width: 100px;
+    max-height: 55px;
     margin-right: 1vw;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 body {
@@ -40,30 +76,32 @@ body {
 }
 
 #game {
-    width: 30vw;
-    margin-left: 35vw;
-    transform: translate(0, -50%);
-    margin-top: 50vh;
+    width: 25vw;
+    min-width: 300px;
+    margin-left: 50vw;
+    transform: translate(-50%);
+    margin-top: 1vh;
 }
 
 #board {
     width: 100%;
-    height: 30vw;
-    max-width: 635px;
-    max-height: 635px;
-    margin-top: 1vw;
+    height: 25vw;
+    min-height: 300px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 #blackCatches {
-    width: 30vw;
+    width: 100%;
     height: 2vw;
+    min-height: 30px;
     background-color: rgba(133, 133, 133, 0.6);
 }
 
 #whiteCatches {
     width: 100%;
     height: 2vw;
-    margin-top: 1vw;
+    min-height: 30px;
     background-color: rgba(133, 133, 133, 0.6);
 }
 

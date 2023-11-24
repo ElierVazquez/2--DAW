@@ -14,6 +14,8 @@
         </nav>
     </header>
 
-    <footer></footer>
+    <footer>
+        <a href="usagePolicies.php" id="link_policies">Usage policies</a>
+    </footer>
 </body>
 </html>
