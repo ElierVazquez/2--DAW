@@ -5,8 +5,9 @@
     <title>Chess</title>
     <link rel="stylesheet" href="../../css/chess_game_styles.css">
 </head>
-<body>
+<body id="special_body">
     <header>
+        <img src="../../img/gear.png" alt="Config" id="config">
         <h1>Chess</h1>
         <nav id="buttons">
             <button>New Game</button>
@@ -234,7 +235,7 @@
         DrawChessGame($board);
     ?>
     <footer>
-        <a href="usagePolicies.php" id="link_policies">Usage policies</a>
+        <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>
 </body>
 </html>
