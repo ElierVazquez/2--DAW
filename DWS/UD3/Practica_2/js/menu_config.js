@@ -1,3 +1,15 @@
-let gear = document.getElementById("config");
+function rotate()
+{
+    let src = document.getElementById("config");
 
-gear.onclick = "style{transform: rotate(45);}"
+    src.setAttribute("class", "rotate");
+    src.setAttribute("onclick", "rotateInv()");
+}
+
+function rotateInv()
+{
+    let src = document.getElementById("config");
+
+    src.removeAttribute("class");
+    src.setAttribute("onclick", "rotate()")
+}

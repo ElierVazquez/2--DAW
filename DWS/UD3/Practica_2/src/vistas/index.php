@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        <img src="../../img/gear.png" alt="Config" id="config">
+        <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
         <h1>Chess</h1>
         <nav id="buttons">
-            <button>New Game</button>
-            <button>Games</button>
+            <button onclick="">New Game</button>
+            <button onclick="">Games</button>
         </nav>
     </header>
 
