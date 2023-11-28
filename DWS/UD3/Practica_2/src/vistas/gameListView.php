@@ -11,19 +11,11 @@
         <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
         <h1>Chess</h1>
         <nav id="buttons">
+            <a href="new_gameView.php"><button>New Game</button></a>
             <a href="index.php"><button>Main page</button></a>
-            <a href="gameListView.php"><button>Game list</button></a>
         </nav>
     </header>
-    <form action="chessView.php" method="post" id="form">
-        <label for="whitePlayer">White player</label>
-        <select name="whitePlayer" id="whitePlayer"></select> <br>
-        <label for="blackPlayer">Black player</label>
-        <select name="blackPlayer" id="blackPlayer"></select> <br> <br>
-        <label for="title">Title of the game</label>
-        <input type="text" name="title" id="title"> <br> <br>
-        <input type="submit" value="Submit" id="submit_button">
-    </form>
+
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>

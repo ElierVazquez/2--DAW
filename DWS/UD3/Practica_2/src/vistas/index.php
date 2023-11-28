@@ -12,10 +12,10 @@
         <h1>Chess</h1>
         <nav id="buttons">
             <a href="new_gameView.php"><button>New Game</button></a>
-            <a href=""><button>Games</button></a>
+            <a href="gameListView.php"><button>Game list</button></a>
         </nav>
     </header>
-    
+
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>
