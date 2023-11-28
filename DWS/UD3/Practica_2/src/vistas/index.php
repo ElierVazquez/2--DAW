@@ -11,11 +11,11 @@
         <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
         <h1>Chess</h1>
         <nav id="buttons">
-            <button onclick="">New Game</button>
-            <button onclick="">Games</button>
+            <a href="new_gameView.php"><button>New Game</button></a>
+            <a href=""><button>Games</button></a>
         </nav>
     </header>
-
+    
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>

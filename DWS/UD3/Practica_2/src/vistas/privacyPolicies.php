@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Chess</title>
     <link rel="stylesheet" href="../../css/chess_game_styles.css">
+    <script src="../../js/menu_config.js"></script>
 </head>
 <body>
     <header>
