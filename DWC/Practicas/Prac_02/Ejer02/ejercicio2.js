@@ -1,4 +1,6 @@
 class NIF {
+    num;
+    letra;
 
     constructor(num, letra) {
 
@@ -7,24 +9,31 @@ class NIF {
 
     }
 
-    esCorrecto(num, letra) {
+    esCorrecto() {
 
-        if (num < 7 || num > 7) {
-            return false;
-        }
+        let num = this.num;
+        let letra = this.letra;
 
         let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
 
-        let calc = num % 23;
+        letra = letras[num%23];
 
-        if (calc < 0 || calc > 22) {
-
+        if (num.length == 8 && letra == this.letra) {
+            return true;
+        } else {
             return false;
-
         }
-
-        return true;
 
     }
 
 }
+
+let nif1 = new NIF("02255667", "B");
+let nif2 = new NIF("01489562", "J");
+let nif3 = new NIF("01156987", "A");
+let nif4 = new NIF("03569874", "P");
+
+document.getElementById("res1").innerHTML = nif1.esCorrecto();
+document.getElementById("res2").innerHTML = nif2.esCorrecto();
+document.getElementById("res3").innerHTML = nif3.esCorrecto();
+document.getElementById("res4").innerHTML = nif4.esCorrecto();
