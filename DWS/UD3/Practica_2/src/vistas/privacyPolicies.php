@@ -11,8 +11,7 @@
         <img src="../../img/gear.png" alt="Config" id="config">
         <h1>Chess</h1>
         <nav id="buttons">
-            <button>New Game</button>
-            <button>Games</button>
+        <a href="index.php"><button>Main page</button></a>
         </nav>
     </header>
     <div id="policies_box">

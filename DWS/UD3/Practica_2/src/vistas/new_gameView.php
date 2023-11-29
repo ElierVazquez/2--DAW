@@ -15,11 +15,30 @@
             <a href="gameListView.php"><button>Game list</button></a>
         </nav>
     </header>
+    <?php
+        require("../negocio/players_Rules.php");
+        $playersBL = new Players_Rules();
+        $playersInfo = $playersBL->toGet();
+    ?>
     <form action="chessView.php" method="post" id="form">
         <label for="whitePlayer">White player</label>
-        <select name="whitePlayer" id="whitePlayer"></select> <br>
+        <select name="whitePlayer" id="whitePlayer">
+            <?php
+                foreach ($playersInfo as $player)
+                {
+                    echo "<option value=\"{$player->getID()}\">{$player->getName()}</option>";
+                }
+            ?>
+        </select> <br>
         <label for="blackPlayer">Black player</label>
-        <select name="blackPlayer" id="blackPlayer"></select> <br> <br>
+        <select name="blackPlayer" id="blackPlayer">
+            <?php
+                foreach ($playersInfo as $player)
+                {
+                    echo "<option value=\"{$player->getID()}\">{$player->getName()}</option>";
+                }
+            ?>
+        </select> <br> <br>
         <label for="title">Title of the game</label>
         <input type="text" name="title" id="title"> <br> <br>
         <input type="submit" value="Submit" id="submit_button">

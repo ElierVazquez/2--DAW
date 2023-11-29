@@ -10,8 +10,9 @@
         <img src="../../img/gear.png" alt="Config" id="config">
         <h1>Chess</h1>
         <nav id="buttons">
-            <button>New Game</button>
-            <button>Games</button>
+            <a href="new_gameView.php"><button>New Game</button></a>    
+            <a href="index.php"><button>Main page</button></a>
+            <a href="gameListView.php"><button>Game list</button></a>
         </nav>
     </header>
     <?php
