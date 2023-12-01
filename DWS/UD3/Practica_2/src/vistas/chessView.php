@@ -16,9 +16,16 @@
         </nav>
     </header>
     <?php
-
+        require("../negocio/matches_Rules.php");
         $matchesBL = new Matches_Rules();
 
+        $title = $_POST["title"];
+        $whitePlayer = $_POST["whitePlayer"];
+        $blackPlayer = $_POST["blackPlayer"];
+
+        $matchesBL->toSet($title, $whitePlayer, $blackPlayer);
+    ?>
+    <?php
         $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
 
         function AssembleBoard($game)

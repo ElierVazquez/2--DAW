@@ -9,18 +9,25 @@
         private $_white;
         private $_black;
         private $_startDate;
+        private $_endDate;
+        private $_winner;
         private $_state;
 
         function __construct()
         {}
 
-        function init($id, $title, $white, $black, $startDate)
+        function init($title, $white, $black)
         {
-            $this->_ID = $id;
             $this->_title = $title;
             $this->_white = $white;
             $this->_black = $black;
-            $this->_startDate = $startDate;
-            $this->_state = "En curso";
+        }
+
+        function toSet($title, $white, $black)
+        {
+            $matches_rules = new Matches_Rules();
+            $matches_rules->init($title, $white, $black);
+            $matchesDAL = new Matches_DataAccess();
+            $matchesDAL->toSet($title, $white, $black);
         }
     }
