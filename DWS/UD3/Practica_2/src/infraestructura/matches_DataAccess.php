@@ -19,4 +19,10 @@
             $insert_match->bind_param("s", $sanitized_title);
             $insert_match->execute();
         }
+
+        function toGet()
+        {
+            $connection = mysqli_connect('localhost', 'root', '12345678');
+            
+        }
     }

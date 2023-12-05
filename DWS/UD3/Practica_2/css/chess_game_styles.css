@@ -234,3 +234,12 @@ body {
 .deathZone img {
     width: 100%;
 }
+
+#list {
+    background-color: black;
+    width: 50vw;
+    height: 65vh;
+    position: absolute;
+    left: 25vw;
+    top: 17.5vh;
+}

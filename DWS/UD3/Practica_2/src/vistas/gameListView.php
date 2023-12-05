@@ -15,7 +15,9 @@
             <a href="index.php"><button>Main page</button></a>
         </nav>
     </header>
-
+    <div id="list">
+        
+    </div>
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>
