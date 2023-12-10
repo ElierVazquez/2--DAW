@@ -8,7 +8,7 @@ header {
     margin-bottom: 2vh;
     margin-left: 1vw;
     width: 98vw;
-    height: 12vh;
+    height: 10vh;
     min-height: 60px;
     background-color: #333333cc;
     border-radius: 20px;
@@ -16,7 +16,7 @@ header {
 
 footer {
     width: 98vw;
-    height: 12vh;
+    height: 10vh;
     min-height: 60px;
     background-color: #333333cc;
     border-radius: 20px;
@@ -27,12 +27,13 @@ footer {
 
 #policies_box {
     background-color: rgba(128, 128, 128, 0.95);
+    position: absolute;
     width: 90%;
-    margin-left: 50vw;
-    margin-top: 4vh;
+    left: 50vw;
+    top: 50vh;
     box-shadow: 0 0 10px 10px gray;
     padding: 1vw;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
 }
 
 #policies_box h2 {
@@ -51,7 +52,7 @@ footer {
     width: 5vh;
     height: 5vh;
     float: left;
-    margin-top: 3.5vh;
+    margin-top: 2.5vh;
     margin-left: 1vw;
     cursor: pointer;
     transition: 250ms;
@@ -66,7 +67,7 @@ header h1 {
     text-align: center;
     color: bisque;
     margin-left: 46vw;
-    margin-top: 6vh;
+    margin-top: 5vh;
     transform: translate(-50%, -50%);
     display: block;
     float: left;
@@ -89,7 +90,7 @@ footer a {
     display: block;
     float: right;
     transform: translate(0%, -50%);
-    margin-top: 6vh;
+    margin-top: 5vh;
 }
 
 #buttons button {
@@ -172,9 +173,10 @@ body {
 #game {
     width: 25vw;
     min-width: 300px;
-    margin-left: 50vw;
-    transform: translate(-50%);
-    margin-top: 1vh;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 #board {
@@ -236,10 +238,43 @@ body {
 }
 
 #list {
-    background-color: black;
+    background-color: beige;
     width: 50vw;
-    height: 65vh;
+    min-width: 480px;
+    max-height: 65vh;
     position: absolute;
-    left: 25vw;
-    top: 17.5vh;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+#list table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 12px;
+    margin-bottom: auto;
+}
+
+.boxes {
+    border: 1px solid black;
+    height: 12px;
+
+}
+
+thead {
+    background-color: burlywood;
+}
+
+#navigate {
+    background-color: #333333cc;
+    width: 20vw;
+    height: 40vh;
+    margin-left: 10vw;
+    margin-top: 15vh;
 }
