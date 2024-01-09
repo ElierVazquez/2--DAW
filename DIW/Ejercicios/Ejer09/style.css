@@ -1,0 +1,12 @@
+div {
+    background-color: black;
+    padding: 50px;
+}
+
+a {
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 25px;
+}
