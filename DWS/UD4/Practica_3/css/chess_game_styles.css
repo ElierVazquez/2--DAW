@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    width: 98vw;
+    height: 10vh;
+    min-height: 60px;
+    background-color: #333333cc;
+    border-radius: 20px;
+}
+
+footer {
+    width: 98vw;
+    height: 10vh;
+    min-height: 60px;
+    background-color: #333333cc;
+    border-radius: 20px;
+    position: absolute;
+    left: 1vw;
+    bottom: 2vh;
+}
+
+#policies_box {
+    background-color: rgba(128, 128, 128, 0.95);
+    position: absolute;
+    width: 90%;
+    left: 50vw;
+    top: 50vh;
+    box-shadow: 0 0 10px 10px gray;
+    padding: 1vw;
+    transform: translate(-50%, -50%);
+}
+
+#policies_box h2 {
+    font-size: 1.4vw;
+}
+
+#policies_box h3 {
+    font-size: 1.1vw;
+}
+
+#policies_box p {
+    font-size: 0.75vw;
+}
+
+#config {
+    width: 5vh;
+    height: 5vh;
+    float: left;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: 250ms;
+}
+
+header h1 {
+    text-align: center;
+    color: bisque;
+    margin-left: 46vw;
+    margin-top: 5vh;
+    transform: translate(-50%, -50%);
+    display: block;
+    float: left;
+    cursor: default;
+}
+
+footer a {
+    text-align: center;
+    color: bisque;
+    margin-left: 49vw;
+    margin-top: 6vh;
+    transform: translate(-50%, -50%);
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: bisque;
+}
+
+#buttons {
+    display: block;
+    float: right;
+    transform: translate(0%, -50%);
+    margin-top: 5vh;
+}
+
+#buttons button {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-right: 1vw;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.75vw;
+    text-decoration: none;
+    transition: 250ms;
+}
+
+#buttons button:hover {
+    transform: scale(110%, 110%);
+    transition: 250ms;
+}
+
+body {
+    background-image: url("../img/page_background.jpg");
+    background-size: cover;
+}
+
+#form {
+    border: 1px solid black;
+    border-radius: 20px 20px;
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    margin-top: 11vh;
+    background-color: #333333cc;
+    color: white;
+}
+
+#form select {
+    transform: translate(-50%);
+    margin-left: 50%;
+}
+
+#form label {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+#title {
+    transform: translate(-50%);
+    margin-left: 50%;
+}
+
+#submit_button {
+    width: 8vw;
+    height: 6vh;
+    font-size: 1vw;
+    position: relative;
+    top: 8%;
+    left: 42%;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 20px 20px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+#submit_button:hover {
+    transform: scale(110%);
+    transition: 250ms;
+}
+
+#special_body {
+    overflow: hidden;
+}
+
+#game {
+    width: 25vw;
+    min-width: 300px;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#board {
+    width: 100%;
+    height: 25vw;
+    min-height: 300px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#blackCatches {
+    width: 100%;
+    height: 2vw;
+    min-height: 30px;
+    background-color: rgba(133, 133, 133, 0.6);
+}
+
+#whiteCatches {
+    width: 100%;
+    height: 2vw;
+    min-height: 30px;
+    background-color: rgba(133, 133, 133, 0.6);
+}
+
+.section {
+    width: 12.5%;
+    height: 12.5%;
+    float: left;
+    position: relative;
+}
+
+.section img {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.White {
+    background-image: url("../img/white_section.png");
+}
+
+.Black {
+    background-image: url("../img/black_section.png");
+}
+
+.piece {
+    width: 100%;
+    z-index: 1;
+}
+
+.deathZone {
+    height: 100%;
+    width: 6.25%;
+    float: left;
+}
+
+.deathZone img {
+    width: 100%;
+}
+
+#list {
+    background-color: beige;
+    width: 50vw;
+    min-width: 480px;
+    max-height: 65vh;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+#list table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 12px;
+    margin-bottom: auto;
+}
+
+.boxes {
+    border: 1px solid black;
+    height: 12px;
+
+}
+
+thead {
+    background-color: burlywood;
+}
+
+#navigate {
+    background-color: #333333cc;
+    width: 20vw;
+    height: 40vh;
+    margin-left: 10vw;
+    margin-top: 15vh;
+}
