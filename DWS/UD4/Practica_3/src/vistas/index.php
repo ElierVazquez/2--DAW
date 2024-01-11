@@ -16,15 +16,18 @@
             <a href="gameListView.php"><button>Game list</button></a>
         </nav>
         <nav id="user_management">
-            <nav>
-                <img src="../../img/login.png" alt="Login" id="login">
+            <nav id="login">
+                <img src="../../img/login.png" alt="Login">
+                <p>Login</p>
             </nav>
-            <nav>
-                <img src="../../img/register.png" alt="Register" id="register">
+            <nav id="register">
+                <img src="../../img/register.png" alt="Register">
+                <p>Register</p>
             </nav>
             <hr>
-            <nav>
-                <img src="../../img/logout.png" alt="Logout" id="logout">
+            <nav id="logout">
+                <img src="../../img/logout.png" alt="Logout">
+                <p>Logout</p>
             </nav>
         </nav>
     </header>
