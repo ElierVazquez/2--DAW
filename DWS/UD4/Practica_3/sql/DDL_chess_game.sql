@@ -7,7 +7,7 @@ CREATE TABLE T_Players(
 ID int primary key auto_increment,
 name varchar(30) not null,
 email varchar(50) UNIQUE not null,
-password varchar(30) not null
+password varchar(255) not null
 );
 
 CREATE TABLE T_Matches(
