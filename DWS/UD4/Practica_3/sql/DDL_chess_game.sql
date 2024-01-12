@@ -5,7 +5,7 @@ USE chess_game;
 
 CREATE TABLE T_Players(
 ID int primary key auto_increment,
-name varchar(30) not null,
+name varchar(30) unique not null,
 email varchar(50) UNIQUE not null,
 password varchar(255) not null
 );
