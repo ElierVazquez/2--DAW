@@ -32,12 +32,14 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 </head>
 <body id="special_body">
     <header>
-        <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
+        <img src="../../img/gear.png" alt="Config" onclick="show_config()" id="config" class="">
         <h1>Chess</h1>
-        <nav id="buttons">
-            <a href="index.php"><button>Main page</button></a>
-        </nav>
     </header>
+    <div id="config_menu" class="config_hide">
+        <ul id="config_list" class="hide_list">
+            <li>In maintenance</li>
+        </ul>
+    </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="login_form">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" class="login_form">
@@ -49,6 +51,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 
         <input type="submit" value="Login" id="form_button">
     </form>
+    <div id="register_message">
+        <p>¿Don't have an acount?</p>
+        <br>
+        <a href="register.php" id="register_link">Register</a>
+    </div>
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>

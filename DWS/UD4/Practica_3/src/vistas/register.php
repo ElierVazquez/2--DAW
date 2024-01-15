@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
         <h1>Chess</h1>
         <nav id="buttons">
-            <a href="index.php"><button>Main page</button></a>
+            <a href="index.php"><button>Login page</button></a>
         </nav>
     </header>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="register_form">
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="email" name="email" id="email" class="register_form">
 
         <label for="user_psw">Password</label>
-        <input type="password" name="user_psw" id="user_psw" class="register_form">
+        <input type="password" name="user_psw" id="user_psw" class="register_form" minlength="8">
 
         <img src="../../img/show.svg" alt="Show/hide password" id="psw_button" onclick="show()">
 
