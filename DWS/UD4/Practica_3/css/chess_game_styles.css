@@ -431,6 +431,7 @@ thead {
     border: 2px solid black;
     font-weight: bold;
     border-radius: 1vw;
+    text-decoration: none;
 }
 
 #register_message a:hover {
