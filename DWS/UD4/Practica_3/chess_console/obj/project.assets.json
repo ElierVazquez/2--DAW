@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
+      "projectUniqueName": "/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/chess_console/chess_console.csproj",
       "projectName": "chess_console",
-      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/chess_console.csproj",
+      "projectPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/chess_console/chess_console.csproj",
       "packagesPath": "/home/horabaixa/.nuget/packages/",
-      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD2/Practica/ajedrez_console/obj/",
+      "outputPath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/chess_console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/horabaixa/.nuget/NuGet/NuGet.Config"
