@@ -1,12 +1,14 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 
 require("../infraestructura/users_DataAccess.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $u = new Users_DataAccess();
-    $u->toInsert($_POST['username'], $_POST['email'], $_POST['user_psw']);
+    $u->toInsert($_POST['username'], $_POST['email'], $_POST['user_psw'], $_POST['premium']);
 
-    header("Location: index.php");
+    header("Location: mainPage.php");
 }
 ?>
 <!DOCTYPE html>
@@ -37,6 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="user_psw" id="user_psw" class="register_form" minlength="8">
 
         <img src="../../img/show.svg" alt="Show/hide password" id="psw_button" onclick="show()">
+
+        <input type="checkbox" name="premium" id="premium">
+        <label for="premium">Premium</label>
 
         <input type="submit" value="Register" id="form_button">
     </form>

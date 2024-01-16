@@ -9,10 +9,6 @@ class User_Rules
     {
     }
 
-    function toInsert() {
-
-    }
-
     function toVerify($user, $pssw)
     {
         $usersDAL = new Users_DataAccess();

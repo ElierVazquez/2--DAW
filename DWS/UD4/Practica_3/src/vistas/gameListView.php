@@ -20,7 +20,7 @@
         <h1>Chess</h1>
         <nav id="buttons">
             <a href="new_gameView.php"><button>New Game</button></a>
-            <a href="index.php"><button>Main page</button></a>
+            <a href="mainPage.php"><button>Main page</button></a>
         </nav>
     </header>
     <div id="list">

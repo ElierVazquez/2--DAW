@@ -19,8 +19,13 @@
         <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
         <h1>Chess</h1>
         <nav id="buttons">
-            <a href="index.php"><button>Main page</button></a>
-            <a href="gameListView.php"><button>Game list</button></a>
+            <a href="mainPage.php"><button>Main page</button></a>
+            <?php
+                if ($_SESSION['premium'] == 1)
+                {
+                    echo "<a href=\"gameListView.php\"><button>Game list</button></a>";
+                }
+            ?>
         </nav>
     </header>
     <?php

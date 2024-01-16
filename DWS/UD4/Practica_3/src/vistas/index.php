@@ -7,10 +7,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     $userBL = new User_Rules();
     $acount = $userBL->toVerify($_POST['username'],$_POST['user_psw']);
 
-    if ($acount == $_POST['username'])
+    if ($acount['name'] == $_POST['username'])
     {
         session_start();
-        $_SESSION['name'] = $_POST['username'];
+        $_SESSION['name'] = $acount['name'];
+        $_SESSION['premium'] = $acount['premium'];
         header("Location: mainPage.php");
     }
     else
