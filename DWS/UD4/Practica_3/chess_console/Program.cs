@@ -17,6 +17,9 @@ namespace ChessAPI
             Console.WriteLine();
             var code = chess.GetBoardAsStringToChessWeb();
             Console.WriteLine(code);
+
+            
+
             Console.WriteLine("End. Chess Console Test...");
         }
     }
