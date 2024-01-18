@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Matrícula</title>
+    <style>
+        form{
+            margin-top: 20px;
+        }
+    </style>
+    <script src="js/funcionesBotones.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="basico" id="nombre" name="nombre" maxlength="30" required>
+
+        <label for="apellido1">Primer Apellido:</label>
+        <input type="text" class="basico" id="apellido1" name="apellido1" maxlength="30" required>
+
+        <label for="apellido2">Segundo Apellido:</label>
+        <input type="text" class="basico" id="apellido2" name="apellido2" maxlength="30">
+
+        <br><br>
+
+        <label for="dni">DNI:</label>
+        <input type="text" class="basico" id="dni" name="dni" pattern="\d{8}[A-Za-z]" required>
+        <small>Formato: 12345678A</small>
+
+        <br><br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" class="basico" id="fechaNacimiento" name="fechaNacimiento" max="2005-01-01" required>
+
+        <br><br>
+
+        <label>Turno Favorito:</label>
+
+        <br>
+
+        <input type="radio" class="academico" id="turnoManana" name="turno" value="Mañana" required>
+        <label for="turnoManana">Mañana</label>
+
+        <br>
+
+        <input type="radio" id="turnoTarde" class="academico" name="turno" value="Tarde" required>
+        <label for="turnoTarde">Tarde</label>
+
+        <br><br>
+
+        <label>Pide Beca:</label>
+
+        <br>
+
+        <input type="radio" id="siBeca" class="academico" name="beca" value="Si">
+        <label for="siBeca">Sí</label>
+
+        <br>
+
+        <input type="radio" id="noBeca" name="beca" class="academico" value="No" checked>
+        <label for="noBeca">No</label>
+
+        <br><br>
+
+        <label>Asignaturas a Matricularse:</label>
+
+        <br>
+
+        <input type="checkbox" id="lenguajeMarcas" class="academico" name="asignatura" value="Lenguaje de Marcas" checked>
+        <label for="lenguajeMarcas">Lenguaje de Marcas</label>
+
+        <br>
+
+        <input type="checkbox" id="basesDatos" class="academico" name="asignatura" value="Base de Datos" checked>
+        <label for="basesDatos">Bases de Datos</label>
+
+        <br>
+
+        <input type="checkbox" id="programacion" class="academico"  name="asignatura" value="Programacion" checked>
+        <label for="programacion">Programación</label>
+
+        <br>
+
+        <input type="checkbox" id="entornosDesarrollo"class="academico" name="asignatura" value="Entornos de Desarrollo">
+        <label for="entornosDesarrollo">Entornos de Desarrollo</label>
+
+        <br>
+
+        <input type="checkbox" id="fol" class="academico"  name="asignatura" value="Formacion y orientacion laboral">
+        <label for="fol">Formacion y Orientacion Laboral</label>
+
+        <br>
+
+        <input type="checkbox" id="sistemasInformaticos" class="academico" name="asignatura" value="Sistemas Informaticos">
+        <label for="sistemasInformaticos">Sistemas Informaticos</label>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="contacto" name="email" required>
+
+        <br>
+
+        <label for="password">Contraseña (8-15 caracteres):</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="15" required>
+
+        <br>
+
+        <label for="confirmPassword">Repetir Contraseña:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" maxlength="15" required>
+
+        <button type="button" onclick="comprobarContraseña()">Comprobar Contraseña</button>
+        <p id="contraseñaCoincide"></p>
+
+        <br>
+
+        <label for="documentacion">Adjuntar Documentación:</label>
+        <input type="file" class="otros" id="documentacion" name="documentacion" onchange="mostrarNombreArchivo()">
+        <p id="nombreArchivo">Sin fichero adjunto seleccionado</p>
+
+        <br>
+
+        <label for="comentarios">Comentarios Adicionales:</label>
+
+        <br>
+
+        <textarea id="comentarios" class="otros" name="comentarios" rows="5" cols="60"></textarea>
+
+        <br><br>
+
+        <button type="reset">Resetear</button>
+        <button type="submit" >Enviar Formulario</button>
+        <br> <br>
+       
+       
+
+        <input type="hidden" id="fase_previa" name="fase_previa" value="datos_previos">
+        <input type="button" value="Mostrar Datos Basicos" onclick="mostrarBasicos()">
+        <input type="button" value="Mostrar Datos Academicos" onclick="mostrarAcademicos()">
+        <input type="button" value="Mostrar Datos De Contacto" onclick="mostrarContacto()">
+        <input type="button" value="Mostrar Datos Varios" onclick="mostrarOtros()">
+
+        <p id="datosBasicos"></p>
+        <p id="datosAcademicos"></p>
+        <p id="datosContacto"></p>
+        <p id="datosOtros"></p>
+    </form>
+</body>
+</html>

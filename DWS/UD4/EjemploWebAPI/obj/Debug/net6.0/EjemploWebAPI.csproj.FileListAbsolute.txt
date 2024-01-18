@@ -73,3 +73,9 @@
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/obj/Debug/net6.0/EjemploWebAPI.dll
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/obj/Debug/net6.0/ref/EjemploWebAPI.dll
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/obj/Debug/net6.0/EjemploWebAPI.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/bin/Debug/net6.0/EjemploWebAPI.deps.json
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/bin/Debug/net6.0/EjemploWebAPI.runtimeconfig.json
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/bin/Debug/net6.0/EjemploWebAPI.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/bin/Debug/net6.0/ref/EjemploWebAPI.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/bin/Debug/net6.0/EjemploWebAPI.pdb
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/EjemploWebAPI/obj/Debug/net6.0/EjemploWebAPI.genruntimeconfig.cache
