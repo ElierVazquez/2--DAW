@@ -120,7 +120,13 @@ namespace ChessAPI
 
         }
 
-        
+        public BoardScore GetBoardScore() {
+
+            int contWhite = 0;
+            int contBlack = 0;
+            string message = "";
+            BoardScore resultObj = new BoardScore();
+        }
 
     }
 }

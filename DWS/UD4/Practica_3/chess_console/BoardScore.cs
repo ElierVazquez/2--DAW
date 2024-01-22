@@ -2,7 +2,7 @@ using ChessAPI.Model;
 
 namespace ChessAPI
 {
-    internal class Material
+    internal class BoardScore
     {
         private int _materialValorWhite = 0;
 
@@ -10,7 +10,7 @@ namespace ChessAPI
 
         private string _messageDist = "";
 
-        public Material(int materialValorWhite, int materialValorBlack, string messageDist)
+        public BoardScore(int materialValorWhite, int materialValorBlack, string messageDist)
         {
             this._materialValorWhite = materialValorWhite;
             this._materialValorBlack = materialValorBlack;
