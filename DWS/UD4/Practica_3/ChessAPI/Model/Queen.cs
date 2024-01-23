@@ -9,7 +9,7 @@ namespace ChessAPI.Model
 
         public override int GetScore()
         {
-            return Config.QueenValue;
+            return PieceValues.QueenValue;
         }
     }
 }

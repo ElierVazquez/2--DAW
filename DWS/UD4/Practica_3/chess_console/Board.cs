@@ -6,7 +6,7 @@ namespace ChessAPI
     {
         public Piece[,] board;
 
-        public Board()
+        public Board(string board)
         {
             board = new Piece[8, 8];
 
@@ -122,11 +122,7 @@ namespace ChessAPI
 
         public BoardScore GetBoardScore() {
 
-            int contWhite = 0;
-            int contBlack = 0;
-            string message = "";
-            BoardScore resultObj = new BoardScore();
-        }
+            
 
     }
 }
