@@ -13,18 +13,9 @@ public class BoardScore
             this._messageDist = messageDist;
         }
 
-        public int GetMaterialValorWhite()
-        {
-            return this._materialValorWhite;
-        }
+        public int GetMaterialValorWhite { get => _materialValorWhite; set => _materialValorWhite = value;}
 
-        public int GetMaterialValorBlack()
-        {
-            return this._materialValorBlack;
-        }
+        public int GetMaterialValorBlack { get => _materialValorBlack; set => _materialValorBlack = value;}
 
-        public string GetMessageDist()
-        {
-            return this._messageDist;
-        }
+        public string GetMessageDist { get => _messageDist; set => _messageDist = value;}
 }
