@@ -23,58 +23,61 @@ namespace ChessAPI.Model
                 }
             }
 
+            int contList = 0;
+
             for (int row = 0; row < _boardPieces.GetLength(0); row++)
             {
                 for (int col = 0; col < _boardPieces.GetLength(1); col++)
                 {
-                    if (pieces[(row + col)] == "ROBL")
+                    if (pieces[contList] == "ROBL")
                     {
                         _boardPieces[row, col] = new Rook(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "ROWH")
+                    else if (pieces[contList] == "ROWH")
                     {
                         _boardPieces[row, col] = new Rook(Piece.ColorEnum.WHITE);
                     }
-                    else if (pieces[(row + col)] == "KNBL")
+                    else if (pieces[contList] == "KNBL")
                     {
                         _boardPieces[row, col] = new Knight(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "KNWH")
+                    else if (pieces[contList] == "KNWH")
                     {
                         _boardPieces[row, col] = new Knight(Piece.ColorEnum.WHITE);
                     }
-                    else if (pieces[(row + col)] == "BIBL")
+                    else if (pieces[contList] == "BIBL")
                     {
                         _boardPieces[row, col] = new Bishop(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "BIWH")
+                    else if (pieces[contList] == "BIWH")
                     {
                         _boardPieces[row, col] = new Bishop(Piece.ColorEnum.WHITE);
                     }
-                    else if (pieces[(row + col)] == "QUBL")
+                    else if (pieces[contList] == "QUBL")
                     {
                         _boardPieces[row, col] = new Queen(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "QUWH")
+                    else if (pieces[contList] == "QUWH")
                     {
                         _boardPieces[row, col] = new Queen(Piece.ColorEnum.WHITE);
                     }
-                    else if (pieces[(row + col)] == "KIBL")
+                    else if (pieces[contList] == "KIBL")
                     {
                         _boardPieces[row, col] = new King(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "KIWH")
+                    else if (pieces[contList] == "KIWH")
                     {
                         _boardPieces[row, col] = new King(Piece.ColorEnum.WHITE);
                     }
-                    else if (pieces[(row + col)] == "PABL")
+                    else if (pieces[contList] == "PABL")
                     {
                         _boardPieces[row, col] = new Pawn(Piece.ColorEnum.BLACK);
                     }
-                    else if (pieces[(row + col)] == "PAWH")
+                    else if (pieces[contList] == "PAWH")
                     {
                         _boardPieces[row, col] = new Pawn(Piece.ColorEnum.WHITE);
                     }
+                    contList++;
                 }
             }
 
@@ -129,7 +132,7 @@ namespace ChessAPI.Model
             }
             else 
             {
-                message = "";
+                message = "Draw";
             }
 
             return new BoardScore(contWhite, contBlack, message);

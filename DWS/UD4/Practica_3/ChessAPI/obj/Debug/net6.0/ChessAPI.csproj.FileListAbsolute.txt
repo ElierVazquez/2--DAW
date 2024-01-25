@@ -52,16 +52,6 @@
 /home/carlos/Escritorio/WebAPIS/ChessAPI/obj/Debug/net6.0/scopedcss/bundle/ChessAPI.styles.css
 /home/carlos/Escritorio/WebAPIS/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.CopyComplete
 /home/carlos/Escritorio/WebAPIS/ChessAPI/obj/Debug/net6.0/ChessAPI.genruntimeconfig.cache
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.AssemblyReference.cache
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.GeneratedMSBuildEditorConfig.editorconfig
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.AssemblyInfoInputs.cache
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.AssemblyInfo.cs
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.CoreCompileInputs.cache
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.MvcApplicationPartsAssemblyInfo.cs
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.MvcApplicationPartsAssemblyInfo.cache
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.dll
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ref/ChessAPI.dll
-/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.pdb
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/appsettings.Development.json
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/appsettings.json
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/ChessAPI
@@ -74,8 +64,18 @@
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.AssemblyReference.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.GeneratedMSBuildEditorConfig.editorconfig
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.AssemblyInfoInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.AssemblyInfo.cs
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.CoreCompileInputs.cache
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.MvcApplicationPartsAssemblyInfo.cs
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.MvcApplicationPartsAssemblyInfo.cache
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/staticwebassets.build.json
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/staticwebassets.development.json
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/scopedcss/bundle/ChessAPI.styles.css
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.csproj.CopyComplete
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ref/ChessAPI.dll
+/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.pdb
 /home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/obj/Debug/net6.0/ChessAPI.genruntimeconfig.cache
