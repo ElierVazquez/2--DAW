@@ -5,6 +5,11 @@
     {
         header("Location: index.php");
     }
+
+    if ($_SESSION['premium'] == 0)
+    {
+        header("Location: mainPage.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
