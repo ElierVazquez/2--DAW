@@ -7,14 +7,21 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     $userBL = new User_Rules();
     $acount = $userBL->toVerify($_POST['username'],$_POST['user_psw']);
 
-    if ($acount['name'] == $_POST['username'])
+    try
     {
-        session_start();
-        $_SESSION['name'] = $acount['name'];
-        $_SESSION['premium'] = $acount['premium'];
-        header("Location: mainPage.php");
+        if ($acount['name'] == $_POST['username'])
+        {
+            session_start();
+            $_SESSION['name'] = $acount['name'];
+            $_SESSION['premium'] = $acount['premium'];
+            header("Location: mainPage.php");
+        }
+        else
+        {
+            $error = true;
+        }
     }
-    else
+    catch (Throwable $ex)
     {
         $error = true;
     }
@@ -41,14 +48,21 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="login_form">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" class="login_form">
+        <input type="text" name="username" id="username" class="login_form" required>
 
         <label for="user_psw">Password</label>
-        <input type="password" name="user_psw" id="user_psw" class="login_form">
+        <input type="password" name="user_psw" id="user_psw" class="login_form" required minlength="8">
 
         <img src="../../img/show.svg" alt="Show/hide password" id="psw_button" onclick="show()" class="login_form">
 
         <input type="submit" value="Login" id="form_button">
+
+        <?php
+            if (isset($error))
+            {
+                print("<div>Unexpected error</div>");
+            }
+        ?>
     </form>
     <div id="register_message">
         <p>¿Don't have an acount?</p>
@@ -58,11 +72,5 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
     </footer>
-    <?php
-        if (isset($error))
-        {
-            print("<div> You don't have access to the page </div>");
-        }
-    ?>
 </body>
 </html>
