@@ -16,6 +16,15 @@
 <body id="special_body">
     <header>
         <img src="../../img/gear.png" alt="Config" id="config">
+        <a href="logout.php"><img src="../../img/logout.png" alt="Logout" id="logout"></a>
+        <?php
+            echo "<p id=\"username_view\">".$_SESSION['name']."</p>";
+
+            if ($_SESSION['premium'] == 1)
+            {
+                echo "<img id=\"premium_sign\" src=\"../../img/premium.png\" alt=\"premium_sign\">";
+            }
+        ?>
         <h1>Chess</h1>
         <nav id="buttons">
             <a href="new_gameView.php"><button>New Game</button></a>    
@@ -36,9 +45,12 @@
         $whitePlayer = $_POST["whitePlayer"];
         $blackPlayer = $_POST["blackPlayer"];
 
-        $matchesBL->toSet($title, $whitePlayer, $blackPlayer);
+        //$matchesBL->toSet($title, $whitePlayer, $blackPlayer);
     ?>
     <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+
         $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
 
         function AssembleBoard($game)
@@ -247,11 +259,32 @@
                 }
             }
 
+            require("../negocio/api_Rules.php");
+            $apiBL = new Api_Rules();
+    
+            $scoreboard = $apiBL->toGet($board);
+
+            $whiteScore = $scoreboard["getMaterialValorWhite"];
+            $blackScore = $scoreboard["getMaterialValorBlack"];
+            $distance = $scoreboard["getMessageDist"];
+
             AssembleBlackCatches($boardPieces, $contPieces);
 
             AssembleBoard($game);
 
             AssembleWhiteCatches($boardPieces, $contPieces);
+
+            echo "</div>";
+
+            echo "<div id=\"scoreboard\">";
+
+                echo "<h3>Scoreboard</h3>";
+                echo "<br>";
+                echo "<p><b>White: </b>".$whiteScore."</p>";
+                echo "<br>";
+                echo "<p><b>Black: </b>".$blackScore."</p>";
+                echo "<br>";
+                echo "<p>".$distance."</p>";
 
             echo "</div>";
         }

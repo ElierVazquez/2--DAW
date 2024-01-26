@@ -22,6 +22,15 @@
 <body>
     <header>
         <img src="../../img/gear.png" alt="Config" onclick="rotate()" id="config" class="">
+        <a href="logout.php"><img src="../../img/logout.png" alt="Logout" id="logout"></a>
+        <?php
+            echo "<p id=\"username_view\">".$_SESSION['name']."</p>";
+
+            if ($_SESSION['premium'] == 1)
+            {
+                echo "<img id=\"premium_sign\" src=\"../../img/premium.png\" alt=\"premium_sign\">";
+            }
+        ?>
         <h1>Chess</h1>
         <nav id="buttons">
             <a href="new_gameView.php"><button>New Game</button></a>

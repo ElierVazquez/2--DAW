@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 header {
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -37,6 +43,26 @@ header {
 .config_hide {
     transform: translate(-100%);
     transition: 250ms;
+}
+
+#username_view {
+    text-align: center;
+    color: bisque;
+    margin-left: 4vw;
+    margin-top: 5vh;
+    transform: translate(-50%, -50%);
+    display: block;
+    float: left;
+    cursor: default;
+}
+
+#premium_sign {
+    width: 1vw;
+    display: block;
+    float: left;
+    transform: translate(-50%, -50%);
+    margin-top: 5vh;
+    margin-left: 0.25vw;
 }
 
 footer {
@@ -446,4 +472,30 @@ thead {
     cursor: pointer;
     background-color: burlywood;
     box-shadow: 0.25vw 0.5vh 1vh;
+}
+
+#scoreboard {
+    background-color: #333333cc;
+    width: 20vw;
+    height: 20vh;
+    right: 1vw;
+    bottom: 15vh;
+    position: absolute;
+    border-radius: 1vw;
+}
+
+#scoreboard {
+    text-align: center;
+}
+
+#scoreboard h3 {
+    margin-top: 1vh;
+}
+
+#scoreboard h3, #scoreboard b {
+    color: burlywood;
+}
+
+#scoreboard p {
+    color: bisque;
 }
