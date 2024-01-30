@@ -138,6 +138,67 @@ namespace ChessAPI.Model
             return new BoardScore(contWhite, contBlack, message);
 
         }
+
+        public Move ValidateMove(int fromColumn, int fromRow, int toColumn, int toRow)
+        {
+            Movement move = new Movement(fromColumn, fromRow, toColumn, toRow);
+            Piece piece = _boardPieces[fromRow, fromColumn];
+
+            try
+            {
+                if (move.IsValid())
+                {
+                    if (piece.Validate(move, _boardPieces) != Piece.MovementType.InvalidNormalMovement)
+                    {
+                        _boardPieces[toRow, toColumn] = _boardPieces[fromRow, fromColumn];
+                        _boardPieces[fromRow, fromColumn] = null;
+
+                        return new Move(true, GetBoardState(), "OK");
+                    }
+                }
+
+                return new Move(false, GetBoardState(), "Invalid Movement");
+            }
+            catch (Exception ex)
+            {
+                return new Move(false, GetBoardState(), ex.Message);
+            }
+        }
+
+        public string GetBoardState()
+        {
+            string result = string.Empty;
+
+            for (int i = 0; i < _boardPieces.GetLength(0); i++)
+            {
+                for (int j = 0; j < _boardPieces.GetLength(1); j++)
+                {
+                    if (_boardPieces[i, j] != null)
+                    {
+                        result += _boardPieces[i, j].GetCode();
+                    }
+                    else
+                    {
+                        result += "0";
+                    }
+
+                    if (j == _boardPieces.GetLength(1) - 1)
+                    {
+                        result += ";";
+                    }
+                    else
+                    {
+                        result += ",";
+                    }
+                }
+            }
+
+            result = result.Replace("|", "");
+            result = result.Remove(result.Length - 1);
+            
+            return result;
+
+        }
         
     }
 }

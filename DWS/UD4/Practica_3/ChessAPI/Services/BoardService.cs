@@ -9,4 +9,12 @@ public class BoardService : IBoardService
 
         return score;
     }
+
+    public Move ValidateMove(string board, int fromCol, int toCol, int fromRow, int toRow)
+    {
+        Board b  = new Board(board);
+        var validate = b.ValidateMove(fromCol, toCol, fromRow, toRow);
+
+        return validate;
+    }
 }

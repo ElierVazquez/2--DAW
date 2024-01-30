@@ -11,5 +11,10 @@ namespace ChessAPI.Model
         {
             return int.MaxValue;
         }
+
+        public override MovementType ValidateSpecificRulesForMovement(Movement movement, Piece[,] board)
+        {
+            return MovementType.ValidNormalMovement;
+        }
     }
 }

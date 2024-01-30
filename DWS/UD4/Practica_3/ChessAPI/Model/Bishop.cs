@@ -11,5 +11,10 @@ namespace ChessAPI.Model
         {
             return PieceValues.BishopPieceValue;
         }
+
+        public override MovementType ValidateSpecificRulesForMovement(Movement movement, Piece[,] board)
+        {
+            return MovementType.ValidNormalMovement;
+        }
     }
 }
