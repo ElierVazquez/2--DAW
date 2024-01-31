@@ -1,11 +1,8 @@
 <?php
-    require("../infraestructura/BoardStatus_DataAccess.php");
+    require("../infraestructura/boardStatus_DataAccess.php");
 
     class BoardStatus_Rules
     {
-        private $_ID;
-        private $_idgame;
-        private $_turn;
         private $_board;
 
         function __construct()

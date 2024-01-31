@@ -62,7 +62,7 @@
                 <?php
                     foreach ($matches as $match)
                     {
-                        echo "<tr><td class=\"boxes\">{$match->getID()}</td><td class=\"boxes\"><a href=\"boardView.php?game_id={$match->getID()}\">{$match->getTitle()}</a></td><td class=\"boxes\">{$match->getStartDate()}</td><td class=\"boxes\">{$match->getStartHour()}</td><td class=\"boxes\">{$match->getState()}</td><td class=\"boxes\">{$match->getWinner()}</td><td class=\"boxes\">{$match->getEndDate()}</td><td class=\"boxes\">{$match->getEndHour()}</td><td class=\"boxes\">{$match->getWhite()}</td><td class=\"boxes\">{$match->getBlack()}</td></tr>";
+                        echo "<tr><td class=\"boxes\">{$match->getID()}</td><td class=\"boxes\"><a href=\"boardView.php?game_id={$match->getID()}&turn=0\">{$match->getTitle()}</a></td><td class=\"boxes\">{$match->getStartDate()}</td><td class=\"boxes\">{$match->getStartHour()}</td><td class=\"boxes\">{$match->getState()}</td><td class=\"boxes\">{$match->getWinner()}</td><td class=\"boxes\">{$match->getEndDate()}</td><td class=\"boxes\">{$match->getEndHour()}</td><td class=\"boxes\">{$match->getWhite()}</td><td class=\"boxes\">{$match->getBlack()}</td></tr>";
                     }
                 ?>
             </tbody>

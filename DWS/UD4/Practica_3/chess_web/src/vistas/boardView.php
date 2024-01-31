@@ -1,4 +1,7 @@
 <?php
+    // ini_set("display_errors", "On");
+    // ini_set("html_errors", 0);
+
     session_start();
 
     if (!isset($_SESSION['name']))
@@ -43,55 +46,6 @@
             ?>
         </nav>
     </header>
-    <div id="navigate">
-        <button id="start" onclick="firstBoard()"><<</button>
-        <button id="previous" onclick=""><</button>
-        <button id="next" onclick="">></button>
-        <button id="end" onclick="finalBoard()">>></button>
-    </div>
-    <?php
-        $id = $_GET["game_id"];
-
-        require("../negocio/boardStatus_Rules.php");
-        $boardBL = new BoardStatus_Rules();
-        $boardStatusList = $boardBL->toGet($id);
-
-        $turn = 0;
-
-        $board = $boardStatusList[$turn]->getBoard();
-
-        function firstBoard()
-        {
-            $id = $_GET["game_id"];
-
-            require("../negocio/boardStatus_Rules.php");
-            $boardBL = new BoardStatus_Rules();
-            $boardStatusList = $boardBL->toGet($id);
-
-            $turn = 0;
-
-            $board = $boardStatusList[$turn]->getBoard();
-
-            
-
-            DrawChessGame($board);
-        }
-
-        function finalBoard()
-        {
-            $id = $_GET["game_id"];
-
-            require("../negocio/boardStatus_Rules.php");
-            $boardBL = new BoardStatus_Rules();
-            $boardStatusList = $boardBL->toGet($id);
-
-            $turn = count($boardStatusList) - 1;
-
-            $board = $boardStatusList[$turn]->getBoard();
-
-            DrawChessGame($board);
-        }
-    ?>
     <?php
         function AssembleBoard($game)
         {
@@ -328,8 +282,39 @@
 
             echo "</div>";
         }
+    ?>
+    <?php
+        $id = $_GET["game_id"];
 
-        DrawChessGame($board);
+        require("../negocio/boardStatus_Rules.php");
+        $boardBL = new BoardStatus_Rules();
+        $boardStatusList = $boardBL->toGet($id);
+
+        $turn = $_GET['turn'];
+        $lastTurn = count($boardStatusList)-1;
+        $prevTurn = 0;
+        $nextTurn = $lastTurn;
+
+        if ($turn != 0)
+        {
+            $prevTurn = $turn - 1;
+        }
+
+        if ($turn != $lastTurn)
+        {
+            $nextTurn = $turn + 1;
+        }
+    ?>
+    <div id="navigate">
+        <?php
+            echo "<a href=\"boardView.php?game_id={$id}&turn=0\" id=\"start\"><<</a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$prevTurn}\" id=\"previous\"><</a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$nextTurn}\" id=\"next\">></a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$lastTurn}\" id=\"end\">>></a>";
+        ?>
+    </div>
+    <?php
+        DrawChessGame($boardStatusList[$turn]->getBoard());
     ?>
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
