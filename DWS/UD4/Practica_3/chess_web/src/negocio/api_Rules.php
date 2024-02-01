@@ -24,4 +24,12 @@
 
             return $result;
         }
+
+        function toMove($board, $fromColumn, $fromRow, $toColumn, $toRow)
+        {
+            $apiDAL = new api_DataAccess();
+            $result = $apiDAL->toMove($board, $fromColumn, $fromRow, $toColumn, $toRow);
+
+            return $result;
+        }
     }

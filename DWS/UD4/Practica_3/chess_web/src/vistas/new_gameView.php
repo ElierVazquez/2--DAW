@@ -20,7 +20,7 @@
         <a href="logout.php"><img src="../../img/logout.png" alt="Logout" id="logout"></a>
         <?php
             echo "<p id=\"username_view\">".$_SESSION['name']."</p>";
-
+            $_SESSION["turn"] = 0;
             if ($_SESSION['premium'] == 1)
             {
                 echo "<img id=\"premium_sign\" src=\"../../img/premium.png\" alt=\"premium_sign\">";

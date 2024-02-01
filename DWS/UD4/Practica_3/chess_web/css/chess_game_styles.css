@@ -482,9 +482,6 @@ thead {
     bottom: 15vh;
     position: absolute;
     border-radius: 1vw;
-}
-
-#scoreboard {
     text-align: center;
 }
 
@@ -498,4 +495,24 @@ thead {
 
 #scoreboard p {
     color: bisque;
+}
+
+#movement_board {
+    background-color: #333333cc;
+    width: 20vw;
+    height: 20vh;
+    right: 1vw;
+    top: 15vh;
+    position: absolute;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+#movement_board h3 {
+    margin-top: 1vh;
+}
+
+#movement_board h3, #movement_board label {
+    color: burlywood;
+    margin-bottom: 1vh;
 }

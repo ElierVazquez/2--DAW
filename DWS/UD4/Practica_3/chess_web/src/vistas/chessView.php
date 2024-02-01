@@ -38,20 +38,46 @@
         </nav>
     </header>
     <?php
-        require("../negocio/matches_Rules.php");
-        $matchesBL = new Matches_Rules();
-
-        $title = $_POST["title"];
-        $whitePlayer = $_POST["whitePlayer"];
-        $blackPlayer = $_POST["blackPlayer"];
-
-        //$matchesBL->toSet($title, $whitePlayer, $blackPlayer);
-    ?>
-    <?php
+        
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
 
-        $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
+        require("../negocio/api_Rules.php");
+        require("../negocio/matches_Rules.php");
+        require("../negocio/boardStatus_Rules.php");
+
+        if (!isset($_SESSION["turn"]))
+        {
+            $_SESSION["turn"] = 0;
+        }
+
+        $_SESSION["turn"] = $_SESSION["turn"] + 1;
+
+        var_dump($_SESSION["turn"]);
+
+        if (!isset($_SESSION["turn"]) || $_SESSION["turn"] == 0)
+        {
+            $matchesBL = new Matches_Rules();
+            $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
+            $matchesBL->toSet($_SESSION["title"], $_SESSION["whitePlayer"], $_SESSION["blackPlayer"]);
+        }
+        else
+        {
+            $boardStatusBL = new BoardStatus_Rules();
+            $lastState = $boardStatusBL->toGetLastStatus();
+
+            foreach ($lastState as $state)
+            {
+                $board = $state->getBoard();
+            }
+        }
+
+        if (isset($_POST["title"]))
+        {
+            $_SESSION["title"] = $_POST["title"];
+            $_SESSION["whitePlayer"] = $_POST["whitePlayer"];
+            $_SESSION["blackPlayer"] = $_POST["blackPlayer"];
+        }
 
         function AssembleBoard($game)
         {
@@ -171,6 +197,11 @@
 
         function DrawChessGame($board)
         {
+            if (isset($_POST['fromRow']))
+            {
+                $board = toMove($board);
+            }
+
             $contPieces = array
             (
                 "PABL" => 0,
@@ -259,7 +290,6 @@
                 }
             }
 
-            require("../negocio/api_Rules.php");
             $apiBL = new Api_Rules();
     
             $scoreboard = $apiBL->toGet($board);
@@ -276,6 +306,32 @@
 
             echo "</div>";
 
+            echo "<div id=\"movement_board\">";
+
+                echo "<h3>Movement</h3>";
+                echo "<form action=\"chessView.php\" method=\"post\">";
+                    echo "<label for=\"fr\">From row: </label>";
+                    echo "<input type=\"text\" id=\"fr\" name=\"fromRow\">";
+                    echo "<br />";
+
+                    echo "<label for=\"fc\">From column: </label>";
+                    echo "<input type=\"text\" id=\"fc\" name=\"fromColumn\">";
+                    echo "<br />";
+
+                    echo "<label for=\"tr\">To row: </label>";
+                    echo "<input type=\"text\" id=\"tr\" name=\"toRow\">";
+                    echo "<br />";
+
+                    echo "<label for=\"tc\">To column: </label>";
+                    echo "<input type=\"text\" id=\"tc\" name=\"toColumn\">";
+                    echo "<br />";
+                    echo "<br />";
+
+                    echo "<input type=\"submit\" value=\"Submit\">";
+                echo "</form>";
+                
+            echo "</div>";
+
             echo "<div id=\"scoreboard\">";
 
                 echo "<h3>Scoreboard</h3>";
@@ -290,6 +346,44 @@
         }
 
         DrawChessGame($board);
+
+        function toMove($board)
+        {
+            $fromColumn = $_POST['fromColumn'];
+            $fromRow = $_POST['fromRow'];
+            $toColumn = $_POST['toColumn'];
+            $toRow = $_POST['toRow'];
+
+            $boardStatusBL = new BoardStatus_Rules();
+            $apiBL = new Api_Rules();
+
+            try
+            {
+                $move = $apiBL->toMove($board, $fromColumn, $fromRow, $toColumn, $toRow);
+
+                var_dump($move);
+
+                if ($move["valid"] == true)
+                {
+                    $boardStatusBL->toSet($move["board"], $_SESSION["turn"]);
+                    $board = $move["board"];
+                    
+                    return $board;
+                }
+            }
+            catch (Exception $ex)
+            {
+                return $board;
+            }
+
+            return $board;
+        }
+    ?>
+    <?php
+        if (isset($error))
+        {
+            print("<div>Unexpected error</div>");
+        }
     ?>
     <footer>
         <a href="privacyPolicies.php" id="link_policies">Privacy policy</a>
