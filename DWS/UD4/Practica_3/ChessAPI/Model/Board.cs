@@ -12,7 +12,7 @@ namespace ChessAPI.Model
             string[] stringAux;
             string[] auxArray;
 
-            stringAux = board.Split(";");
+            stringAux = board.Split("_");
 
             for (int i = 0; i < stringAux.GetLength(0); i++)
             {
@@ -184,7 +184,7 @@ namespace ChessAPI.Model
 
                     if (j == _boardPieces.GetLength(1) - 1)
                     {
-                        result += ";";
+                        result += "_";
                     }
                     else
                     {

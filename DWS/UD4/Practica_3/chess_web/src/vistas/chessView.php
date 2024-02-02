@@ -46,20 +46,15 @@
         require("../negocio/matches_Rules.php");
         require("../negocio/boardStatus_Rules.php");
 
-        if (!isset($_SESSION["turn"]))
-        {
-            $_SESSION["turn"] = 0;
-        }
-
-        $_SESSION["turn"] = $_SESSION["turn"] + 1;
-
-        var_dump($_SESSION["turn"]);
-
         if (!isset($_SESSION["turn"]) || $_SESSION["turn"] == 0)
         {
+            $_SESSION["turn"] = 1;
             $matchesBL = new Matches_Rules();
-            $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL;PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0;PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH;ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
+            $boardStatusBL = new BoardStatus_Rules();
+            $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL_PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH_ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
             $matchesBL->toSet($_SESSION["title"], $_SESSION["whitePlayer"], $_SESSION["blackPlayer"]);
+
+            $boardStatusBL->toSet($board, $_SESSION["turn"]);
         }
         else
         {
@@ -71,6 +66,8 @@
                 $board = $state->getBoard();
             }
         }
+
+        var_dump($_SESSION["turn"]);
 
         if (isset($_POST["title"]))
         {
@@ -234,7 +231,7 @@
                 "KIWH" => 1
             );
 
-            $rowsGame = explode(";", $board);
+            $rowsGame = explode("_", $board);
             $game = array();
 
             for ($i = 0; $i < count($rowsGame); $i++)
@@ -349,6 +346,8 @@
 
         function toMove($board)
         {
+            $_SESSION["turn"] = $_SESSION["turn"] + 1;
+
             $fromColumn = $_POST['fromColumn'];
             $fromRow = $_POST['fromRow'];
             $toColumn = $_POST['toColumn'];
@@ -373,6 +372,7 @@
             }
             catch (Exception $ex)
             {
+                $_SESSION["turn"] = $_SESSION["turn"] - 1;
                 return $board;
             }
 

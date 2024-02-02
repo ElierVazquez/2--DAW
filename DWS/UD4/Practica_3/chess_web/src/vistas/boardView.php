@@ -197,12 +197,12 @@
                 "KIWH" => 1
             );
 
-            $rowsGame = explode(";", $board);
-            $game = array();
+            $rowsGame = explode("_", $board);
+            $gameboard = array();
 
             for ($i = 0; $i < count($rowsGame); $i++)
             {
-                $game[$i] = explode(",", $rowsGame[$i]);
+                $gameboard[$i] = explode(",", $rowsGame[$i]);
             }
 
             echo "<div id=\"game\">";
@@ -211,7 +211,7 @@
             {
                 for ($column = 0; $column < 8; $column++)
                 {
-                    switch ($game[$row][$column])
+                    switch ($gameboard[$row][$column])
                     {
                         case "PAWH":
                             $contPieces["PAWH"]++;
@@ -255,7 +255,7 @@
 
             AssembleBlackCatches($boardPieces, $contPieces);
 
-            AssembleBoard($game);
+            AssembleBoard($gameboard);
 
             AssembleWhiteCatches($boardPieces, $contPieces);
 
@@ -282,8 +282,7 @@
 
             echo "</div>";
         }
-    ?>
-    <?php
+
         $id = $_GET["game_id"];
 
         require("../negocio/boardStatus_Rules.php");
@@ -307,10 +306,10 @@
     ?>
     <div id="navigate">
         <?php
-            echo "<a href=\"boardView.php?game_id={$id}&turn=0\" id=\"start\"><<</a>";
-            echo "<a href=\"boardView.php?game_id={$id}&turn={$prevTurn}\" id=\"previous\"><</a>";
-            echo "<a href=\"boardView.php?game_id={$id}&turn={$nextTurn}\" id=\"next\">></a>";
-            echo "<a href=\"boardView.php?game_id={$id}&turn={$lastTurn}\" id=\"end\">>></a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn=0\" id=\"start\">First</a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$prevTurn}\" id=\"previous\">Previous</a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$nextTurn}\" id=\"next\">Next</a>";
+            echo "<a href=\"boardView.php?game_id={$id}&turn={$lastTurn}\" id=\"end\">Last</a>";
         ?>
     </div>
     <?php
