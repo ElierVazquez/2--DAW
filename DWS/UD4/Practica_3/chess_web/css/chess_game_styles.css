@@ -345,9 +345,29 @@ thead {
 #navigate {
     background-color: #333333cc;
     width: 20vw;
-    height: 40vh;
-    margin-left: 10vw;
-    margin-top: 15vh;
+    height: 25vh;
+    right: 1vw;
+    top: 15vh;
+    position: absolute;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+#navigate b {
+    color: bisque;
+    margin-top: 1vh;
+    display: block;
+}
+
+#navigate a {
+    border: 1px black solid;
+    background-color: bisque;
+    border-radius: 1vw;
+    display: block;
+    height: 10%;
+    margin: 5%;
+    color: black;
+    text-decoration: none;
 }
 
 .disabled {

@@ -306,6 +306,7 @@
     ?>
     <div id="navigate">
         <?php
+            echo "<b>Turn: ".($_GET["turn"]+1)."</b>";
             echo "<a href=\"boardView.php?game_id={$id}&turn=0\" id=\"start\">First</a>";
             echo "<a href=\"boardView.php?game_id={$id}&turn={$prevTurn}\" id=\"previous\">Previous</a>";
             echo "<a href=\"boardView.php?game_id={$id}&turn={$nextTurn}\" id=\"next\">Next</a>";
