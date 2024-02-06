@@ -1,0 +1,145 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    grid-template-rows: auto auto auto auto auto auto auto 5vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-image: url("img/galaxy.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100px;
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+}
+
+nav {
+    float: left;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero {
+    float: right;
+    width: 70vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.logo {
+    float: left;
+    width: 5vw;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-links {
+    float: right;
+    list-style: none;
+}
+
+.hero h1 {
+    width: 30vw;
+    text-align: center;
+    margin-left: 5vw;
+    font-size: 3.5vh;
+    color: orange;
+    text-shadow: 0.75vw 0.75vh 0.75vw;
+}
+
+.hero a {
+    position: absolute;
+    right: 5vw;
+    text-decoration: none;
+}
+
+.hero a:link {
+    color: darkblue;
+}
+
+.btn {
+    border: 2px solid yellow;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    background-color: orange;
+    color: darkblue;
+    font-weight: 800;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-image: url(img/galaxy.webp);
+    background-size: cover;
+    color: aliceblue;
+}
+
+.hero p {
+    width: 30vw;
+    text-align: center;
+    margin-left: 5vw;
+    font-size: 1.5vh;
+    color: yellow;
+    text-shadow: 0.75vw 0.75vh 0.75vw;
+}
+
+#sobre-nosotros {
+    background-color: cyan;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#servicios {
+    background-color: blueviolet;
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+#galeria {
+    background-color: cadetblue;
+    grid-column: 1/4;
+    grid-row: 3/7;
+}
+
+#contacto {
+    background-color: chartreuse;
+    grid-column: 1/4;
+    grid-row: 7/8;
+}
+
+footer {
+    background-image: url(img/galaxy.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: yellow;
+    text-shadow: 0.75vw 0.75vh 0.75vw;
+    text-align: center;
+    grid-column: 1 / 4;
+    grid-row: 8/8;
+}
+
+footer p {
+    transform: translate(0, -50%);
+    margin-top: 2.5vh;
+}
