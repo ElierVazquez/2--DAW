@@ -6,7 +6,6 @@ namespace ChessAPI.Model
 
         public Board(string board)
         {
-            //+TODO Inicializa _boardPieces con la información de board
             _boardPieces = new Piece[8,8];
             List<string> pieces = new List<string>();
             string[] stringAux;
