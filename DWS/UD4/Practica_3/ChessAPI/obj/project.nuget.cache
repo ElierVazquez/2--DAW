@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "gxhJLjZspioK1OVwqQ3Z0C1Uc7ddv12/NPONi8/s3M8Hkg44amHCBZbomJayMQZF4L9Jhi9lA6CZPg95bpRNOA==",
+  "dgSpecHash": "Oo3JMl9UKofQT48ZiC+gu9GcvzTNlTQzqcnhllKzDAD4mrJ1/SvI6P8CnxYbYZJC0D+VYzfi/4RQ0StT3SOddw==",
   "success": true,
-  "projectFilePath": "E:\\2--DAW\\DWS\\UD4\\Practica_3\\ChessAPI\\ChessAPI.csproj",
+  "projectFilePath": "/home/horabaixa/Escriptori/2º DAW/DWS/UD4/Practica_3/ChessAPI/ChessAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\elier\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\elier\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\elier\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\elier\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\elier\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\elier\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "/home/horabaixa/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
