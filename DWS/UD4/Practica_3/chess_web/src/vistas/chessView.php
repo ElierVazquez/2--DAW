@@ -46,15 +46,20 @@
         require("../negocio/matches_Rules.php");
         require("../negocio/boardStatus_Rules.php");
 
+        if (isset($_POST["title"]))
+        {
+            $_SESSION["title"] = $_POST["title"];
+            $_SESSION["whitePlayer"] = $_POST["whitePlayer"];
+            $_SESSION["blackPlayer"] = $_POST["blackPlayer"];
+        }
+        
         if (!isset($_SESSION["turn"]) || $_SESSION["turn"] == 0)
         {
-            $_SESSION["turn"] = 1;
             $matchesBL = new Matches_Rules();
             $boardStatusBL = new BoardStatus_Rules();
             $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL_PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH_ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";
             $matchesBL->toSet($_SESSION["title"], $_SESSION["whitePlayer"], $_SESSION["blackPlayer"]);
-
-            $boardStatusBL->toSet($board, $_SESSION["turn"]);
+            $boardStatusBL->toSet($board, $_SESSION['turn']);
         }
         else
         {
@@ -65,15 +70,6 @@
             {
                 $board = $state->getBoard();
             }
-        }
-
-        var_dump($_SESSION["turn"]);
-
-        if (isset($_POST["title"]))
-        {
-            $_SESSION["title"] = $_POST["title"];
-            $_SESSION["whitePlayer"] = $_POST["whitePlayer"];
-            $_SESSION["blackPlayer"] = $_POST["blackPlayer"];
         }
 
         function AssembleBoard($game)
@@ -358,9 +354,7 @@
 
             try
             {
-                $move = $apiBL->toMove($board, $fromColumn, $fromRow, $toColumn, $toRow);
-
-                var_dump($move);
+                $move = $apiBL->toMove($board, $fromColumn, $fromRow, $toColumn, $toRow); 
 
                 if ($move["valid"] == true)
                 {

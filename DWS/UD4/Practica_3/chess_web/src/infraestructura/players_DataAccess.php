@@ -13,7 +13,7 @@
             }
 
             mysqli_select_db($connection, 'chess_game');
-            $select_players = mysqli_prepare($connection, "SELECT ID, name FROM T_Players");
+            $select_players = mysqli_prepare($connection, "SELECT ID, name FROM T_Players;");
             $select_players->execute();
             $result = $select_players->get_result();
 

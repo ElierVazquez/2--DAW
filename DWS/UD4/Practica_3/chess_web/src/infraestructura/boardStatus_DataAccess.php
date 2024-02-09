@@ -51,7 +51,6 @@ ini_set("display_startup_errors", 1);
 
         function toSet($board, $turn)
         {
-            var_dump($board, $turn);
             $connection = mysqli_connect('localhost', 'root', '12345678');
             if (mysqli_connect_errno())
             {
@@ -60,7 +59,7 @@ ini_set("display_startup_errors", 1);
 
             mysqli_select_db($connection, "chess_game");
 
-            $insert_turn = mysqli_prepare($connection, "INSERT INTO T_Board_Status(IDGame, board, turn) VALUES ((select ID from T_Matches order by ID desc limit 1), \"{$board}\", {$turn})");
+            $insert_turn = mysqli_prepare($connection, "INSERT INTO T_Board_Status(IDGame, board, turn) VALUES ((select ID from T_Matches order by ID desc limit 1), \"{$board}\", {$turn});");
             $insert_turn->execute();
         }
     }

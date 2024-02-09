@@ -91,8 +91,6 @@
 
         function toSet($title, $white, $black)
         {
-            $matches_rules = new Matches_Rules();
-            $matches_rules->init($title, $white, $black);
             $matchesDAL = new Matches_DataAccess();
             $matchesDAL->toSet($title, $white, $black);
         }

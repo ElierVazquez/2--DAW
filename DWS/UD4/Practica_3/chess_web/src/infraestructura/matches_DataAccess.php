@@ -14,9 +14,11 @@
 
             mysqli_select_db($connection, "chess_game");
 
+            $sanitized_white = mysqli_real_escape_string($connection, $whitePlayer);
+            $sanitized_black = mysqli_real_escape_string($connection, $blackPlayer);
             $sanitized_title = mysqli_real_escape_string($connection, $title);
-            $insert_match = mysqli_prepare($connection, "INSERT INTO T_Matches(title, white, black, startDate, state) VALUES (?, {$whitePlayer}, {$blackPlayer}, NOW(), \"En curso\")");
-            $insert_match->bind_param("s", $sanitized_title);
+            $insert_match = mysqli_prepare($connection, "INSERT INTO T_Matches(title, white, black, startDate, state) VALUES (?, ?, ?, NOW(), \"En curso\");");
+            $insert_match->bind_param("sii", $sanitized_title, $sanitized_white, $sanitized_black);
             $insert_match->execute();
         }
 
