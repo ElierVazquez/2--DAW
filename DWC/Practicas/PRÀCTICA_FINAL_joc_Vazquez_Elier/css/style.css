@@ -58,7 +58,7 @@ td img:hover {
 
 .rotate_phase1 {
     transform: rotateY(90deg);
-    transition: 500ms;
+    transition: all 500ms linear;
 }
 
 #juego {

@@ -22,9 +22,7 @@ $(document).ready(function() {
             card1 = document.getElementById(selected1);
             card1.setAttribute("class", "carta");
 
-            intervalo = setInterval(half_trisicsti, 10000, selected1, selected2);
-
-            clearInterval(intervalo);
+            intervalo = setInterval(half_trisicsti, 1000, selected1, selected2);
 
             card1 = document.getElementById(selected1);
             card1.setAttribute("class", "carta");
