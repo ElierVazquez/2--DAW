@@ -29,3 +29,41 @@ body {
     transform: translate(0, -50%);
     margin-top: 20vh;
 }
+
+td {
+    height: 16vh;
+    width: 5vw;
+}
+
+td img {
+    height: 15vh;
+    margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+    transition: 500ms;
+}
+
+td img:hover {
+    border: 0.3vh solid lightskyblue;
+    border-radius: 8px;
+    height: 14.4vh;
+    width: 4.6vw;
+}
+
+.selected {
+    border: 0.3vh solid lightskyblue;
+    border-radius: 8px;
+    height: 14.4vh;
+    width: 4.6vw;
+    transition: 500ms;
+}
+
+.rotate_phase1 {
+    transform: rotateY(90deg);
+    transition: 500ms;
+}
+
+#juego {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
