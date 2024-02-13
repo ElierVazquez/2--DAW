@@ -35,7 +35,7 @@
             $whitePlayer = "SELECT name FROM T_Players WHERE ID = TM.white";
             $blackPlayer = "SELECT name FROM T_Players WHERE ID = TM.black";
 
-            $select_matches = mysqli_prepare($connection, "SELECT TM.ID, title, DATE(startDate) startDate, TIME(startDate) startHour, state, winner, DATE(endDate) endDate, TIME(endDate) endHour, ({$whitePlayer}), ({$blackPlayer}) FROM T_Matches TM INNER JOIN T_Players TPW ON (TPW.ID = TM.white) INNER JOIN T_Players TPB ON (TPB.ID = TM.black);");
+            $select_matches = mysqli_prepare($connection, "SELECT TM.ID, title, DATE(startDate) startDate, TIME(startDate) startHour, state, winner, DATE(endDate) endDate, TIME(endDate) endHour, ({$whitePlayer}) w, ({$blackPlayer}) b FROM T_Matches TM INNER JOIN T_Players TPW ON (TPW.ID = TM.white) INNER JOIN T_Players TPB ON (TPB.ID = TM.black);");
             $select_matches->execute();
             $result = $select_matches->get_result();
 

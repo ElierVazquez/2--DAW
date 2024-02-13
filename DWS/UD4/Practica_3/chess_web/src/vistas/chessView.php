@@ -52,6 +52,7 @@
         
         if (!isset($_SESSION["turn"]) || $_SESSION["turn"] == 0)
         {
+            $_SESSION["turn"] = 1;
             $matchesBL = new Matches_Rules();
             $boardStatusBL = new BoardStatus_Rules();
             $board = "ROBL,KNBL,BIBL,QUBL,KIBL,BIBL,KNBL,ROBL_PABL,PABL,PABL,PABL,PABL,PABL,PABL,PABL_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_0,0,0,0,0,0,0,0_PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH,PAWH_ROWH,KNWH,BIWH,QUWH,KIWH,BIWH,KNWH,ROWH";

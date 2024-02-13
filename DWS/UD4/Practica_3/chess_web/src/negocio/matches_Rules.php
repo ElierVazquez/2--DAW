@@ -105,7 +105,7 @@
             foreach ($rs as $match)
             {
                 $matchesRules = new Matches_Rules();
-                $matchesRules->initFull($match["ID"], $match["title"], $match["white"], $match["black"], $match["startDate"], $match["startHour"], $match["endDate"], $match["endHour"], $match["winner"], $match["state"]);
+                $matchesRules->initFull($match["ID"], $match["title"], $match["w"], $match["b"], $match["startDate"], $match["startHour"], $match["endDate"], $match["endHour"], $match["winner"], $match["state"]);
                 array_push($matchesList, $matchesRules);
             }
 
