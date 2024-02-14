@@ -30,22 +30,21 @@ body {
     margin-top: 20vh;
 }
 
-td {
+.card-box {
     height: 16vh;
     width: 5vw;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card-box:hover .carta {
+    transform: rotateY(180deg);
 }
 
 td img {
     height: 15vh;
     margin: 0.5vh 0.5vw 0.5vh 0.5vw;
     transition: 500ms;
-}
-
-td img:hover {
-    border: 0.3vh solid lightskyblue;
-    border-radius: 8px;
-    height: 14.4vh;
-    width: 4.6vw;
 }
 
 .selected {
@@ -66,4 +65,8 @@ td img:hover {
     position: absolute;
     top: 50vh;
     left: 50vw;
+}
+
+.delante {
+    
 }

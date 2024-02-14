@@ -16,7 +16,7 @@
     <div id="juego">
         <table>
             <tr>
-                <td><img src="img/card_back.png" alt="Unselected card" data-card-id="0-0" id="0-0" class="carta"></td>
+                <td class="card-box"><img src="img/card_back.png" alt="Unselected card" data-card-id="0-0" id="0-0" class="carta"><img src="img/01c.png" alt="Card" class="carta delante"></td>
                 <td><img src="img/card_back.png" alt="Unselected card" data-card-id="1-0" id="1-0" class="carta"></td>
                 <td><img src="img/card_back.png" alt="Unselected card" data-card-id="2-0" id="2-0" class="carta"></td>
                 <td><img src="img/card_back.png" alt="Unselected card" data-card-id="3-0" id="3-0" class="carta"></td>
