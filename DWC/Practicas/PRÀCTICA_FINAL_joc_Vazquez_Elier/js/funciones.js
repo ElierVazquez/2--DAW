@@ -6,6 +6,9 @@ $(document).ready(function() {
         let card1;
         let card2;
 
+        let card1c;
+        let card2c;
+
         if (selected1 == null) {
             selected1 = clickedCard;
             console.log("1 " + selected1);
@@ -20,7 +23,10 @@ $(document).ready(function() {
             }
 
             card1 = document.getElementById(selected1);
-            card1.setAttribute("class", "carta");
+            card1c = document.getElementById(selected1 + "c");
+
+            card1.setAttribute("class", "carta rotate_detras");
+            card1c.setAttribute("class", "carta rotate_delante");
 
             selected1 = null;
         }
