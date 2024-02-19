@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <form action="post">
+        <label for="nombre">Nombre completo: </label>
+        <input type="text" id="nombre" name="nombre" maxlength="80" required>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="codigo">Código: </label>
+        <input type="text" id="codigo" name="codigo" pattern="[A-Za-z]{2}[0-9]{4}[A-Za-z]{2}">
+        <br>
+        <label for="nacimiento">Fecha de nacimiento: </label>
+        <input type="date" name="nacimiento" id="nacimiento" min="2006-01-01">
+        <br>
+        <label for="psswd">Contraseña: </label>
+        <input type="password" id="psswd" name="psswd" minlength="8">
+        <br>
+        <label for="rpsswd">Repite la contraseña: </label>
+        <input type="password" id="rpsswd" name="rpsswd" required>
+        <p id="res_psswd"></p>
+        <br>
+        <input type="checkbox" name="redes" id="redes" onclick="redes_sociales_on()">
+        <label for="redes">¿Usas redes sociales?</label>
+        <br>
+        <div id="redes_sociales" style="display: none;">
+            <br>
+            <input type="radio" name="red" id="red1" checked> <label for="red1">Facebook</label>
+            <br>
+            <input type="radio" name="red" id="red2"> <label for="red2">Instagram</label>
+            <br>
+            <input type="radio" name="red" id="red3"> <label for="red3">Twitter</label>
+            <br>
+            <input type="radio" name="red" id="red4"> <label for="red4">Otra</label>
+            <br>
+            <br>
+        </div>
+
+        <input type="file" name="imagen" id="imagen">
+        <br>
+        <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        <br>
+        <br>
+    </form>
+    <p id="info"></p>
+    <script src="funciones.js"></script>
+</body>
+</html>

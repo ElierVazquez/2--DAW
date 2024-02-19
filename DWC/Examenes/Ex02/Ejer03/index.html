@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+ width: 400px;
+ height: 200px;
+ position: relative;
+ background: black;
+}
+#animate {
+ width: 50px;
+ height: 50px;
+ top: 75px;
+ position: absolute;
+ background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="knightRider()">Knight Rider</button></p>
+
+<div id ="container">
+ <div id ="animate"></div>
+</div>
+<script>
+    let pos_x;
+    let pos_y;
+    let dir;
+
+function knightRider() {
+ let id = null;
+ const elem = document.getElementById("animate");  
+ 
+
+ frame();
+
+ function frame() {
+   if (pos_x < 350 && dir===0) {
+     pos_x=pos_x+10;
+     elem.style.left = pos_x + "px";
+   }else if(pos_x == 350 && dir===0) {
+    dir = 1;
+    pos_x=pos_x-10;
+     elem.style.left = pos_x + "px";
+   }else if(pos_x > 0 && dir===1) {
+     pos_x=pos_x-10;
+     elem.style.left = pos_x + "px";
+   }else if(pos_x == 0 && dir===1) {
+    dir = 0;
+    pos_x=pos_x+10;
+     elem.style.left = pos_x + "px";
+   }
+
+   return pos_x;
+ 
+}
+}
+</script>
+
+</body>
+</html>
