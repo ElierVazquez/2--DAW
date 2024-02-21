@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Rf6lqyNjjX1Mlgilg87A74HDWIbu37i5NgGAGTYAsQ7wckyGFPVZnM4IanwHpyR9+Qogqt8E6jpgusxrRzd+tA==",
+  "success": true,
+  "projectFilePath": "/home/horabaixa/Escriptori/2º DAW/Jogo/Prueba/Prueba.csproj",
+  "expectedPackageFiles": [
+    "/home/horabaixa/.nuget/packages/monogame.content.builder.task/3.8.1.303/monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "/home/horabaixa/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
