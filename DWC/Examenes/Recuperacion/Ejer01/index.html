@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Parte 1</h1>
+        <label for="nombre">Nombre completo: </label>
+        <input type="text" id="nombre" name="nombre" maxlength="80" required>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="color">Color: </label>
+        <input type="color" name="color" id="color">
+        <br>
+        <p id="res_monitor"></p>
+        <br>
+        <label for="cumple">Fecha de cumpleaños: </label>
+        <input type="date" name="cumple" id="cumple" min="2006-01-01">
+        <br>
+        <p>Tipo de prácticas:</p>
+        <br>
+        <input type="radio" name="prac" id="prac1"><label for="prac1">Grado Medio</label>
+        <br>
+        <input type="radio" name="prac" id="prac2"><label for="prac2">Grado Superior</label>
+        <br>
+        <input type="radio" name="prac" id="prac3"><label for="prac3">Leonardo Da Vinci</label>
+        <br>
+        <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        <br>
+        <br>
+
+        <h1>Parte 2</h1>
+        <label for="isla">Isla: </label>
+        <select name="isla" id="isla">
+            <option value="mallorca">Mallorca</option>
+            <option value="menorca">Menorca</option>
+            <option value="ibiza">Ibiza</option>
+        </select>
+        <br>
+        <br>
+        <label for="municipio">Municipio: </label>
+        <select name="municipio" id="municipio">
+            <option value="mun1" id="mun1"></option>
+            <option value="mun2" id="mun2"></option>
+            <option value="mun3" id="mun3"></option>
+        </select>
+    </form>
+</body>
+<script src="funciones.js"></script>
+</html>
